@@ -12503,22 +12503,22 @@ My Team
 Information
 </span>
 </div>
-<div x-show="$store.globals.user !== null" style="border-top: 1px solid #ffffff" @click="desktop.createSettingsPane()" ">
+<div x-show="false" style="border-top: 1px solid #ffffff" @click="desktop.createSettingsPane()" ">
 <img src="/themes/uiuctf-2023-ctfd-theme/static/img/win98-icons/settings_gear-1.png" />
 <span>
 Settings
 </span>
 </div>
-<div x-show="$store.globals.user !== null" @click="desktop.triggerLogout()">
+<div x-show="false" @click="desktop.triggerLogout()">
 <img src="/themes/uiuctf-2023-ctfd-theme/static/img/win98-icons/key_win-1.png" />
 <span x-text="'Log out...'">
 </span>
 </div>
-<div x-show="$store.globals.user === null" @click="desktop.createRegisterPane()" style="border-top: 1px solid #ffffff">
+<div x-show="false" @click="desktop.createRegisterPane()" style="border-top: 1px solid #ffffff">
 <img src="/themes/uiuctf-2023-ctfd-theme/static/img/win98-icons/msagent-1.png" />
 <span>Register</span>
 </div>
-<div x-show="$store.globals.user === null" @click="desktop.createLoginPane()">
+<div x-show="false" @click="desktop.createLoginPane()">
 <img src="/themes/uiuctf-2023-ctfd-theme/static/img/win98-icons/key_win-1.png" />
 <span x-text="'Log in...'">
 </span>
