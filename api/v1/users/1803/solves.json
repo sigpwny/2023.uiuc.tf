@@ -1,0 +1,1 @@
+{"success": true, "data": [{"type": "correct", "challenge_id": 15, "challenge": {"name": "Zapping a Setuid 1", "id": 15, "value": 127, "category": "pwn"}, "user": {"name": "Quois", "id": 1803}, "date": "2023-07-01T16:32:46.693151+00:00", "id": 18724, "team": {"name": "SNHT", "id": 621}}], "meta": {"count": 1}}

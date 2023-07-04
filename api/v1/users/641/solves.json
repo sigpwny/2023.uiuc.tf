@@ -1,0 +1,1 @@
+{"success": true, "data": [{"team": {"id": 369, "name": "Los_Pollos_Hermanos"}, "id": 21478, "user": {"id": 641, "name": "H31s3nb3rg"}, "challenge_id": 30, "type": "correct", "date": "2023-07-01T20:08:39.281099+00:00", "challenge": {"id": 30, "category": "web", "value": 99, "name": "peanut-xss"}}], "meta": {"count": 1}}

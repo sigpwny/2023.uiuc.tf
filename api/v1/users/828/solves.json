@@ -1,0 +1,1 @@
+{"success": true, "data": [{"team": {"id": 64, "name": "42Roma"}, "id": 3571, "user": {"id": 828, "name": "lukenet"}, "challenge_id": 13, "type": "correct", "date": "2023-07-01T02:00:38.470513+00:00", "challenge": {"id": 13, "category": "crypto", "value": 50, "name": "Three-Time Pad"}}], "meta": {"count": 1}}

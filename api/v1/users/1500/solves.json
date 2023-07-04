@@ -1,0 +1,1 @@
+{"success": true, "data": [{"team": {"id": 352, "name": "cat :flag_kr:"}, "id": 10601, "user": {"id": 1500, "name": "bww9641"}, "challenge_id": 12, "type": "correct", "date": "2023-07-01T08:55:58.927526+00:00", "challenge": {"id": 12, "category": "osint", "value": 50, "name": "First class mail"}}], "meta": {"count": 1}}

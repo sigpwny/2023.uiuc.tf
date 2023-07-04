@@ -1,0 +1,1 @@
+{"success": true, "data": [{"team": {"id": 64, "name": "42Roma"}, "id": 4640, "user": {"id": 123, "name": "mcoppola"}, "challenge_id": 18, "type": "correct", "date": "2023-07-01T02:43:12.058348+00:00", "challenge": {"id": 18, "category": "crypto", "value": 50, "name": "At Home"}}], "meta": {"count": 1}}

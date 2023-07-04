@@ -1,0 +1,1 @@
+{"success": true, "data": [{"team": {"id": 941, "name": "aaaaaaaa"}, "id": 12543, "user": {"id": 1739, "name": "aaaaaaaa"}, "challenge_id": 22, "type": "correct", "date": "2023-07-01T10:54:51.695159+00:00", "challenge": {"id": 22, "category": "misc", "value": 50, "name": "Corny Kernel"}}], "meta": {"count": 1}}

@@ -1,0 +1,1 @@
+{"success": true, "data": [{"type": "correct", "challenge_id": 31, "challenge": {"name": "Chainmail", "id": 31, "value": 50, "category": "pwn"}, "user": {"name": "edwfeng", "id": 699}, "date": "2023-07-01T07:25:23.308998+00:00", "id": 9276, "team": {"name": "Babbage Patch Kids", "id": 403}}], "meta": {"count": 1}}

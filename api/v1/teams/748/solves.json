@@ -1,0 +1,1 @@
+{"success": true, "data": [{"team": {"id": 748, "name": "cnm"}, "id": 3977, "user": {"id": 1351, "name": "aassdyl"}, "challenge_id": 13, "type": "correct", "date": "2023-07-01T02:14:03.704810+00:00", "challenge": {"id": 13, "category": "crypto", "value": 50, "name": "Three-Time Pad"}}], "meta": {"count": 1}}

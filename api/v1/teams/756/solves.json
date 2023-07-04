@@ -1,0 +1,1 @@
+{"success": true, "data": [{"team": {"id": 756, "name": "kk"}, "id": 2892, "user": {"id": 1365, "name": "kk"}, "challenge_id": 7, "type": "correct", "date": "2023-07-01T01:39:35.208707+00:00", "challenge": {"id": 7, "category": "osint", "value": 50, "name": "Finding Artifacts 2"}}], "meta": {"count": 1}}

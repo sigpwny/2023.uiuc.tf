@@ -1,0 +1,1 @@
+{"success": true, "data": [{"team": {"id": 589, "name": "Cryptonite"}, "id": 16938, "user": {"id": 1336, "name": "d3v"}, "challenge_id": 30, "type": "correct", "date": "2023-07-01T14:39:44.528317+00:00", "challenge": {"id": 30, "category": "web", "value": 99, "name": "peanut-xss"}}], "meta": {"count": 1}}

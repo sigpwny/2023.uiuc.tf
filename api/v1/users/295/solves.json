@@ -1,0 +1,1 @@
+{"success": true, "data": [{"team": {"id": 105, "name": "W3Bfederation"}, "id": 9878, "user": {"id": 295, "name": "hexcat"}, "challenge_id": 12, "type": "correct", "date": "2023-07-01T08:03:12.419165+00:00", "challenge": {"id": 12, "category": "osint", "value": 50, "name": "First class mail"}}], "meta": {"count": 1}}

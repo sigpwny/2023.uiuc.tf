@@ -1,0 +1,1 @@
+{"success": true, "data": [{"team": {"id": 890, "name": "Citrus Cyber"}, "id": 8727, "user": {"id": 1635, "name": "mando"}, "challenge_id": 33, "type": "correct", "date": "2023-07-01T06:46:35.155832+00:00", "challenge": {"id": 33, "category": "misc", "value": 1, "name": "Join our Discord"}}], "meta": {"count": 1}}

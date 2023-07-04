@@ -1,0 +1,1 @@
+{"success": true, "data": [{"team": {"id": 660, "name": "REVillains"}, "id": 12070, "user": {"id": 1811, "name": "scipio"}, "challenge_id": 31, "type": "correct", "date": "2023-07-01T10:19:05.627355+00:00", "challenge": {"id": 31, "category": "pwn", "value": 50, "name": "Chainmail"}}], "meta": {"count": 1}}

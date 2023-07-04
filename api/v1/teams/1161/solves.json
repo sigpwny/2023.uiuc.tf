@@ -1,0 +1,1 @@
+{"success": true, "data": [{"team": {"id": 1161, "name": "SamTeam"}, "id": 24178, "user": {"id": 2195, "name": "SamXML"}, "challenge_id": 30, "type": "correct", "date": "2023-07-02T02:18:00.091052+00:00", "challenge": {"id": 30, "category": "web", "value": 99, "name": "peanut-xss"}}], "meta": {"count": 1}}

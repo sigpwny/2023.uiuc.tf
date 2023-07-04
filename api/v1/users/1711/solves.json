@@ -1,0 +1,1 @@
+{"success": true, "data": [{"team": {"id": 927, "name": "Abysslab"}, "id": 12627, "user": {"id": 1711, "name": "inthewild"}, "challenge_id": 31, "type": "correct", "date": "2023-07-01T11:00:25.293263+00:00", "challenge": {"id": 31, "category": "pwn", "value": 50, "name": "Chainmail"}}], "meta": {"count": 1}}

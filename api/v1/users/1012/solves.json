@@ -1,0 +1,1 @@
+{"success": true, "data": [{"team": {"id": 563, "name": "whois"}, "id": 9001, "user": {"id": 1012, "name": "M4ndU"}, "challenge_id": 18, "type": "correct", "date": "2023-07-01T07:05:14.774908+00:00", "challenge": {"id": 18, "category": "crypto", "value": 50, "name": "At Home"}}], "meta": {"count": 1}}

@@ -1,0 +1,1 @@
+{"success": true, "data": [{"team": {"id": 61, "name": "UofTCTF"}, "id": 21454, "user": {"id": 1429, "name": "prettykitty"}, "challenge_id": 18, "type": "correct", "date": "2023-07-01T20:05:41.732268+00:00", "challenge": {"id": 18, "category": "crypto", "value": 50, "name": "At Home"}}], "meta": {"count": 1}}

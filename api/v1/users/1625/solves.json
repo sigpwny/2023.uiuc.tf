@@ -1,0 +1,1 @@
+{"success": true, "data": [{"type": "correct", "challenge_id": 11, "challenge": {"name": "Jonah's Journal", "id": 11, "value": 50, "category": "osint"}, "user": {"name": "Shelby", "id": 1625}, "date": "2023-07-01T07:38:19.961825+00:00", "id": 9497, "team": {"name": "Tak terhingga", "id": 567}}], "meta": {"count": 1}}

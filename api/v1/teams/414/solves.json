@@ -1,0 +1,1 @@
+{"success": true, "data": [{"type": "correct", "challenge_id": 7, "challenge": {"name": "Finding Artifacts 2", "id": 7, "value": 50, "category": "osint"}, "user": {"name": "RushLogan", "id": 714}, "date": "2023-07-01T17:36:17.414272+00:00", "id": 19502, "team": {"name": "BeyondRCE", "id": 414}}], "meta": {"count": 1}}

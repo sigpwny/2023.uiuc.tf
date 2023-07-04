@@ -1,0 +1,1 @@
+{"success": true, "data": [{"type": "correct", "challenge_id": 31, "challenge": {"name": "Chainmail", "id": 31, "value": 50, "category": "pwn"}, "user": {"name": "0xLoneWolf", "id": 46}, "date": "2023-07-01T00:56:28.933030+00:00", "id": 1512, "team": {"name": "Hacktualizers.EXE", "id": 4}}], "meta": {"count": 1}}

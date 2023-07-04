@@ -1,0 +1,1 @@
+{"success": true, "data": [{"team": {"id": 325, "name": "XA21"}, "id": 18610, "user": {"id": 2091, "name": "Evix"}, "challenge_id": 9, "type": "correct", "date": "2023-07-01T16:25:07.561269+00:00", "challenge": {"id": 9, "category": "osint", "value": 50, "name": "Finding Jonah?"}}], "meta": {"count": 1}}

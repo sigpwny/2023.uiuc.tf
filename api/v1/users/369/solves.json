@@ -1,0 +1,1 @@
+{"success": true, "data": [{"team": {"id": 182, "name": "PL314D3S"}, "id": 25086, "user": {"id": 369, "name": "gd0r0y"}, "challenge_id": 8, "type": "correct", "date": "2023-07-02T06:10:27.035437+00:00", "challenge": {"id": 8, "category": "osint", "value": 50, "name": "What's for Dinner?"}}], "meta": {"count": 1}}

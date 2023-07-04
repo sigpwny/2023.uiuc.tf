@@ -1,0 +1,1 @@
+{"success": true, "data": [{"team": {"id": 938, "name": "IEEEFTW"}, "id": 22177, "user": {"id": 1763, "name": "mikev"}, "challenge_id": 3, "type": "correct", "date": "2023-07-01T21:29:16.455652+00:00", "challenge": {"id": 3, "category": "rev", "value": 50, "name": "vmwhere1"}}], "meta": {"count": 1}}

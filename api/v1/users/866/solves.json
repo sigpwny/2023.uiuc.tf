@@ -1,0 +1,1 @@
+{"success": true, "data": [{"type": "correct", "challenge_id": 6, "challenge": {"name": "Finding Artifacts 1", "id": 6, "value": 50, "category": "osint"}, "user": {"name": "meow_thx4organizingCTF", "id": 866}, "date": "2023-07-01T06:51:55.534559+00:00", "id": 8825, "team": {"name": "intelligence_cloud9", "id": 505}}], "meta": {"count": 1}}

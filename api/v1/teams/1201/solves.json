@@ -1,0 +1,1 @@
+{"success": true, "data": [{"team": {"id": 1201, "name": "AmeenSec"}, "id": 23841, "user": {"id": 2265, "name": "AmeenSec"}, "challenge_id": 33, "type": "correct", "date": "2023-07-02T01:27:25.621736+00:00", "challenge": {"id": 33, "category": "misc", "value": 1, "name": "Join our Discord"}}], "meta": {"count": 1}}

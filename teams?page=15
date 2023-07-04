@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>UIUCTF 2023</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" href="/files/abe7b3ed7c9b36de10a3c74ea37c5c4d/uiuctf-2023-pwny-favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/themes/uiuctf-2023-ctfd-theme/static/assets/main.776ccc78.css">
+<script type="text/javascript">
+      window.init = {
+          'urlRoot': "",
+          'csrfNonce': "452d4ae62ab01dea2535a84ab331cc48ea1a09386448de09b3882ba73235355e",
+          'userMode': "teams",
+          'userId': 0,
+          'userName': null,
+          'userEmail': null,
+          'teamId': null, 
+          'teamName': null,
+          'start': 1688170500,
+          'end': 1688343300,
+          'themeSettings': null,
+          'eventSounds': [
+            "/themes/core/static/sounds/notification.webm",
+            "/themes/core/static/sounds/notification.mp3",
+          ],
+      }
+  </script>
+</head>
+<body>
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+<div class="container">
+<a href="/" class="navbar-brand">
+UIUCTF 2023
+</a>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#base-navbars" aria-controls="base-navbars" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="base-navbars">
+<ul class="navbar-nav me-auto">
+<li class="nav-item">
+<a class="nav-link" href="/ctfd">CTFd Home</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="/users">Users</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="/teams">Teams</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="/scoreboard">Scoreboard</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="/challenges">Challenges</a>
+</li>
+</ul>
+<hr class="d-sm-flex d-md-flex d-lg-none">
+<ul class="navbar-nav ms-md-auto d-block d-sm-flex d-md-flex">
+<li class="nav-item">
+<a class="nav-link" href="/register">
+<span class="d-block" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Register">
+<i class="fas fa-user-plus d-none d-md-block d-lg-none"></i>
+</span>
+<span class="d-sm-block d-md-none d-lg-block">
+<i class="fas fa-user-plus pe-1"></i>Register
+</span>
+</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="/login">
+<span class="d-block" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Login">
+<i class="fas fa-sign-in-alt d-none d-md-block d-lg-none"></i>
+</span>
+<span class="d-sm-block d-md-none d-lg-block">
+<i class="fas fa-sign-in-alt pe-1"></i>Login
+</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+<main role="main">
+<div class="jumbotron">
+<div class="container">
+<h1>Teams</h1>
+</div>
+</div>
+<div class="container">
+<div class="row">
+<div class="col-md-12">
+<form method="GET" class="row justify-content-around align-items-center">
+<div class="mb-3 col-md-2">
+<select class="form-control form-select w-100" id="field" name="field" required><option selected value="name">Name</option><option value="affiliation">Affiliation</option><option value="website">Website</option></select>
+</div>
+<div class="mb-3 col-md-8">
+<input class="form-control w-100" id="q" name="q" placeholder="Search for matching teams" required type="text" value>
+</div>
+<div class="mb-3 col-md-2">
+<button type="submit" class="btn btn-primary w-100">
+<i class="fas fa-search" aria-hidden="true"></i>
+</button>
+</div>
+</form>
+</div>
+</div>
+<hr>
+<div class="row">
+<div class="col-md-12">
+<table class="table table-striped">
+<thead>
+<tr>
+<td class="text-md-start"><b>Team</b></td>
+<td><b>Website</b></td>
+<td class="d-none d-md-table-cell"><b>Affiliation</b></td>
+<td class="d-none d-md-table-cell"><b>Country</b></td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="/teams/732">Ginkgo</a>
+</td>
+<td style="width: 10px;">
+</td>
+<td class="d-none d-md-table-cell">
+</td>
+<td class="d-none d-md-table-cell">
+<span>
+</span>
+</td>
+</tr>
+<tr>
+<td>
+<a href="/teams/733">in_the_w3ll</a>
+</td>
+<td style="width: 10px;">
+</td>
+<td class="d-none d-md-table-cell">
+</td>
+<td class="d-none d-md-table-cell">
+<span>
+</span>
+</td>
+</tr>
+<tr>
+<td>
+<a href="/teams/734">mooseq</a>
+</td>
+<td style="width: 10px;">
+</td>
+<td class="d-none d-md-table-cell">
+</td>
+<td class="d-none d-md-table-cell">
+<span>
+</span>
+</td>
+</tr>
+<tr>
+<td>
+<a href="/teams/735">kj20232023</a>
+</td>
+<td style="width: 10px;">
+</td>
+<td class="d-none d-md-table-cell">
+</td>
+<td class="d-none d-md-table-cell">
+<span>
+</span>
+</td>
+</tr>
+<tr>
+<td>
+<a href="/teams/736">Unlimited</a>
+</td>
+<td style="width: 10px;">
+</td>
+<td class="d-none d-md-table-cell">
+</td>
+<td class="d-none d-md-table-cell">
+<span>
+</span>
+</td>
+</tr>
+<tr>
+<td>
+<a href="/teams/737"><span class="__cf_email__" data-cfemail="88fef9fcedfdedf2e0eefceafff9e3c8e1e6fcedfae6edfce3ede6e7a6ebe7e5">[email&#160;protected]</span></a>
+</td>
+<td style="width: 10px;">
+</td>
+<td class="d-none d-md-table-cell">
+</td>
+<td class="d-none d-md-table-cell">
+<span>
+</span>
+</td>
+</tr>
+<tr>
+<td>
+<a href="/teams/738">theLast3.14PIdigits</a>
+</td>
+<td style="width: 10px;">
+</td>
+<td class="d-none d-md-table-cell">
+</td>
+<td class="d-none d-md-table-cell">
+<span>
+</span>
+</td>
+</tr>
+<tr>
+<td>
+<a href="/teams/739">Cyber Peanuts</a>
+</td>
+<td style="width: 10px;">
+</td>
+<td class="d-none d-md-table-cell">
+</td>
+<td class="d-none d-md-table-cell">
+<span>
+</span>
+</td>
+</tr>
+<tr>
+<td>
+<a href="/teams/740">Siber TKJ Masbro</a>
+</td>
+<td style="width: 10px;">
+</td>
+<td class="d-none d-md-table-cell">
+</td>
+<td class="d-none d-md-table-cell">
+<span>
+</span>
+</td>
+</tr>
+<tr>
+<td>
+<a href="/teams/741">Mayas</a>
+</td>
+<td style="width: 10px;">
+</td>
+<td class="d-none d-md-table-cell">
+</td>
+<td class="d-none d-md-table-cell">
+<span>
+</span>
+</td>
+</tr>
+<tr>
+<td>
+<a href="/teams/742">Fuzzy Goldfish</a>
+</td>
+<td style="width: 10px;">
+</td>
+<td class="d-none d-md-table-cell">
+</td>
+<td class="d-none d-md-table-cell">
+<span>
+</span>
+</td>
+</tr>
+<tr>
+<td>
+<a href="/teams/743">BranMan</a>
+</td>
+<td style="width: 10px;">
+</td>
+<td class="d-none d-md-table-cell">
+</td>
+<td class="d-none d-md-table-cell">
+<span>
+</span>
+</td>
+</tr>
+<tr>
+<td>
+<a href="/teams/744">{{01}}</a>
+</td>
+<td style="width: 10px;">
+</td>
+<td class="d-none d-md-table-cell">
+</td>
+<td class="d-none d-md-table-cell">
+<span>
+</span>
+</td>
+</tr>
+<tr>
+<td>
+<a href="/teams/745">Mod Mad Hackers</a>
+</td>
+<td style="width: 10px;">
+</td>
+<td class="d-none d-md-table-cell">
+</td>
+<td class="d-none d-md-table-cell">
+<span>
+</span>
+</td>
+</tr>
+<tr>
+<td>
+<a href="/teams/746">nazgul</a>
+</td>
+<td style="width: 10px;">
+</td>
+<td class="d-none d-md-table-cell">
+</td>
+<td class="d-none d-md-table-cell">
+<span>
+</span>
+</td>
+</tr>
+<tr>
+<td>
+<a href="/teams/747">sf_t4ng0</a>
+</td>
+<td style="width: 10px;">
+</td>
+<td class="d-none d-md-table-cell">
+</td>
+<td class="d-none d-md-table-cell">
+<span>
+</span>
+</td>
+</tr>
+<tr>
+<td>
+<a href="/teams/748">cnm</a>
+</td>
+<td style="width: 10px;">
+</td>
+<td class="d-none d-md-table-cell">
+</td>
+<td class="d-none d-md-table-cell">
+<span>
+</span>
+</td>
+</tr>
+<tr>
+<td>
+<a href="/teams/749">Discovery</a>
+</td>
+<td style="width: 10px;">
+</td>
+<td class="d-none d-md-table-cell">
+</td>
+<td class="d-none d-md-table-cell">
+<span>
+</span>
+</td>
+</tr>
+<tr>
+<td>
+<a href="/teams/750">abaaba</a>
+</td>
+<td style="width: 10px;">
+</td>
+<td class="d-none d-md-table-cell">
+</td>
+<td class="d-none d-md-table-cell">
+<span>
+</span>
+</td>
+</tr>
+<tr>
+<td>
+<a href="/teams/751">loli</a>
+</td>
+<td style="width: 10px;">
+</td>
+<td class="d-none d-md-table-cell">
+</td>
+<td class="d-none d-md-table-cell">
+<span>
+</span>
+</td>
+</tr>
+<tr>
+<td>
+<a href="/teams/752">ether</a>
+</td>
+<td style="width: 10px;">
+</td>
+<td class="d-none d-md-table-cell">
+</td>
+<td class="d-none d-md-table-cell">
+<span>
+</span>
+</td>
+</tr>
+<tr>
+<td>
+<a href="/teams/753">ParanoidNinjas</a>
+</td>
+<td style="width: 10px;">
+</td>
+<td class="d-none d-md-table-cell">
+</td>
+<td class="d-none d-md-table-cell">
+<span>
+</span>
+</td>
+</tr>
+<tr>
+<td>
+<a href="/teams/754">xpteam</a>
+</td>
+<td style="width: 10px;">
+</td>
+<td class="d-none d-md-table-cell">
+</td>
+<td class="d-none d-md-table-cell">
+<span>
+</span>
+</td>
+</tr>
+<tr>
+<td>
+<a href="/teams/755">🧸</a>
+</td>
+<td style="width: 10px;">
+</td>
+<td class="d-none d-md-table-cell">
+<span>
+Project osu!lazer
+</span>
+</td>
+<td class="d-none d-md-table-cell">
+<span>
+<i class="flag-us"></i>
+United States
+</span>
+</td>
+</tr>
+<tr>
+<td>
+<a href="/teams/756">kk</a>
+</td>
+<td style="width: 10px;">
+</td>
+<td class="d-none d-md-table-cell">
+</td>
+<td class="d-none d-md-table-cell">
+<span>
+</span>
+</td>
+</tr>
+<tr>
+<td>
+<a href="/teams/757">hwed</a>
+</td>
+<td style="width: 10px;">
+</td>
+<td class="d-none d-md-table-cell">
+</td>
+<td class="d-none d-md-table-cell">
+<span>
+</span>
+</td>
+</tr>
+<tr>
+<td>
+<a href="/teams/758">lol</a>
+</td>
+<td style="width: 10px;">
+</td>
+<td class="d-none d-md-table-cell">
+</td>
+<td class="d-none d-md-table-cell">
+<span>
+</span>
+</td>
+</tr>
+<tr>
+<td>
+<a href="/teams/759">OutSiders</a>
+</td>
+<td style="width: 10px;">
+</td>
+<td class="d-none d-md-table-cell">
+</td>
+<td class="d-none d-md-table-cell">
+<span>
+</span>
+</td>
+</tr>
+<tr>
+<td>
+<a href="/teams/760">TPC</a>
+</td>
+<td style="width: 10px;">
+</td>
+<td class="d-none d-md-table-cell">
+</td>
+<td class="d-none d-md-table-cell">
+<span>
+</span>
+</td>
+</tr>
+<tr>
+<td>
+<a href="/teams/761">Horoscope</a>
+</td>
+<td style="width: 10px;">
+</td>
+<td class="d-none d-md-table-cell">
+</td>
+<td class="d-none d-md-table-cell">
+<span>
+</span>
+</td>
+</tr>
+<tr>
+<td>
+<a href="/teams/762">Iron Shark</a>
+</td>
+<td style="width: 10px;">
+</td>
+<td class="d-none d-md-table-cell">
+</td>
+<td class="d-none d-md-table-cell">
+<span>
+</span>
+</td>
+</tr>
+<tr>
+<td>
+<a href="/teams/763">qp</a>
+</td>
+<td style="width: 10px;">
+</td>
+<td class="d-none d-md-table-cell">
+</td>
+<td class="d-none d-md-table-cell">
+<span>
+</span>
+</td>
+</tr>
+<tr>
+<td>
+<a href="/teams/764">saif</a>
+</td>
+<td style="width: 10px;">
+</td>
+<td class="d-none d-md-table-cell">
+</td>
+<td class="d-none d-md-table-cell">
+<span>
+</span>
+</td>
+</tr>
+<tr>
+<td>
+<a href="/teams/765">1NS0MN144</a>
+</td>
+<td style="width: 10px;">
+</td>
+<td class="d-none d-md-table-cell">
+</td>
+<td class="d-none d-md-table-cell">
+<span>
+</span>
+</td>
+</tr>
+<tr>
+<td>
+<a href="/teams/766">herta enjoyer</a>
+</td>
+<td style="width: 10px;">
+</td>
+<td class="d-none d-md-table-cell">
+</td>
+<td class="d-none d-md-table-cell">
+<span>
+</span>
+</td>
+</tr>
+<tr>
+<td>
+<a href="/teams/767">annoyingclippy</a>
+</td>
+<td style="width: 10px;">
+</td>
+<td class="d-none d-md-table-cell">
+</td>
+<td class="d-none d-md-table-cell">
+<span>
+</span>
+</td>
+</tr>
+<tr>
+<td>
+<a href="/teams/768">JWolves</a>
+</td>
+<td style="width: 10px;">
+</td>
+<td class="d-none d-md-table-cell">
+</td>
+<td class="d-none d-md-table-cell">
+<span>
+</span>
+</td>
+</tr>
+<tr>
+<td>
+<a href="/teams/769">ISITDTU</a>
+</td>
+<td style="width: 10px;">
+</td>
+<td class="d-none d-md-table-cell">
+</td>
+<td class="d-none d-md-table-cell">
+<span>
+</span>
+</td>
+</tr>
+<tr>
+<td>
+<a href="/teams/770">Dr4g0n_5l4y3R</a>
+</td>
+<td style="width: 10px;">
+</td>
+<td class="d-none d-md-table-cell">
+</td>
+<td class="d-none d-md-table-cell">
+<span>
+</span>
+</td>
+</tr>
+<tr>
+<td>
+<a href="/teams/771">Anh</a>
+</td>
+<td style="width: 10px;">
+</td>
+<td class="d-none d-md-table-cell">
+</td>
+<td class="d-none d-md-table-cell">
+<span>
+</span>
+</td>
+</tr>
+<tr>
+<td>
+<a href="/teams/772">HackinFunTimes</a>
+</td>
+<td style="width: 10px;">
+</td>
+<td class="d-none d-md-table-cell">
+</td>
+<td class="d-none d-md-table-cell">
+<span>
+</span>
+</td>
+</tr>
+<tr>
+<td>
+<a href="/teams/773">vanatka</a>
+</td>
+<td style="width: 10px;">
+</td>
+<td class="d-none d-md-table-cell">
+</td>
+<td class="d-none d-md-table-cell">
+<span>
+</span>
+</td>
+</tr>
+<tr>
+<td>
+<a href="/teams/774">Triple Triple</a>
+</td>
+<td style="width: 10px;">
+</td>
+<td class="d-none d-md-table-cell">
+</td>
+<td class="d-none d-md-table-cell">
+<span>
+</span>
+</td>
+</tr>
+<tr>
+<td>
+<a href="/teams/775">Bruh</a>
+</td>
+<td style="width: 10px;">
+</td>
+<td class="d-none d-md-table-cell">
+</td>
+<td class="d-none d-md-table-cell">
+<span>
+</span>
+</td>
+</tr>
+<tr>
+<td>
+<a href="/teams/776">n0n</a>
+</td>
+<td style="width: 10px;">
+</td>
+<td class="d-none d-md-table-cell">
+</td>
+<td class="d-none d-md-table-cell">
+<span>
+</span>
+</td>
+</tr>
+<tr>
+<td>
+<a href="/teams/777">dream a cat</a>
+</td>
+<td style="width: 10px;">
+</td>
+<td class="d-none d-md-table-cell">
+</td>
+<td class="d-none d-md-table-cell">
+<span>
+</span>
+</td>
+</tr>
+<tr>
+<td>
+<a href="/teams/778">null</a>
+</td>
+<td style="width: 10px;">
+</td>
+<td class="d-none d-md-table-cell">
+</td>
+<td class="d-none d-md-table-cell">
+<span>
+</span>
+</td>
+</tr>
+<tr>
+<td>
+<a href="/teams/779">pymi</a>
+</td>
+<td style="width: 10px;">
+</td>
+<td class="d-none d-md-table-cell">
+</td>
+<td class="d-none d-md-table-cell">
+<span>
+</span>
+</td>
+</tr>
+<tr>
+<td>
+<a href="/teams/780">asdfkjldfjlk</a>
+</td>
+<td style="width: 10px;">
+</td>
+<td class="d-none d-md-table-cell">
+</td>
+<td class="d-none d-md-table-cell">
+<span>
+</span>
+</td>
+</tr>
+<tr>
+<td>
+<a href="/teams/781">honmono</a>
+</td>
+<td style="width: 10px;">
+</td>
+<td class="d-none d-md-table-cell">
+</td>
+<td class="d-none d-md-table-cell">
+<span>
+</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="row">
+<div class="col-md-12">
+<div class="text-center">
+Page <br>
+<a href="/teams?page=14">&lt;&lt;&lt;</a>
+<select class="page-select">
+<option>1</option>
+<option>2</option>
+<option>3</option>
+<option>4</option>
+<option>5</option>
+<option>6</option>
+<option>7</option>
+<option>8</option>
+<option>9</option>
+<option>10</option>
+<option>11</option>
+<option>12</option>
+<option>13</option>
+<option>14</option>
+<option selected>15</option>
+<option>16</option>
+<option>17</option>
+<option>18</option>
+<option>19</option>
+<option>20</option>
+<option>21</option>
+<option>22</option>
+<option>23</option>
+<option>24</option>
+<option>25</option>
+<option>26</option>
+<option>27</option>
+</select>
+<a href="/teams?page=16">&gt;&gt;&gt;</a>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="footer">
+<div class="container text-center">
+<a href="https://ctfd.io" class="text-secondary">
+<small class="text-muted">Powered by CTFd</small>
+</a>
+</div>
+</footer>
+<div x-data>
+<div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+<div x-ref="toast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+<div class="toast-header">
+<strong class="me-auto" x-text="$store.toast.title"></strong>
+<small>just now</small>
+<button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+</div>
+<div class="toast-body" x-html="$store.toast.html">
+</div>
+</div>
+</div>
+</div>
+<div x-data>
+<div class="modal" x-ref="modal" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title" x-text="$store.modal.title"></h5>
+<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<div class="modal-body">
+<p x-html="$store.modal.html"></p>
+</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-primary" data-bs-dismiss="modal">Got it!</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script defer type="module" src="/themes/uiuctf-2023-ctfd-theme/static/assets/index.5a84c1a7.js"></script><script defer type="module" src="/themes/uiuctf-2023-ctfd-theme/static/assets/teams_list.d702b21f.js"></script>
+</body>
+</html>

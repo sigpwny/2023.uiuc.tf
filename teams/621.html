@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>UIUCTF 2023</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" href="/files/abe7b3ed7c9b36de10a3c74ea37c5c4d/uiuctf-2023-pwny-favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/themes/uiuctf-2023-ctfd-theme/static/assets/main.776ccc78.css">
+<script type="text/javascript">
+      window.init = {
+          'urlRoot': "",
+          'csrfNonce': "452d4ae62ab01dea2535a84ab331cc48ea1a09386448de09b3882ba73235355e",
+          'userMode': "teams",
+          'userId': 0,
+          'userName': null,
+          'userEmail': null,
+          'teamId': null, 
+          'teamName': null,
+          'start': 1688170500,
+          'end': 1688343300,
+          'themeSettings': null,
+          'eventSounds': [
+            "/themes/core/static/sounds/notification.webm",
+            "/themes/core/static/sounds/notification.mp3",
+          ],
+      }
+  </script>
+</head>
+<body>
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+<div class="container">
+<a href="/" class="navbar-brand">
+UIUCTF 2023
+</a>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#base-navbars" aria-controls="base-navbars" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="base-navbars">
+<ul class="navbar-nav me-auto">
+<li class="nav-item">
+<a class="nav-link" href="/ctfd">CTFd Home</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="/users">Users</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="/teams">Teams</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="/scoreboard">Scoreboard</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="/challenges">Challenges</a>
+</li>
+</ul>
+<hr class="d-sm-flex d-md-flex d-lg-none">
+<ul class="navbar-nav ms-md-auto d-block d-sm-flex d-md-flex">
+<li class="nav-item">
+<a class="nav-link" href="/register">
+<span class="d-block" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Register">
+<i class="fas fa-user-plus d-none d-md-block d-lg-none"></i>
+</span>
+<span class="d-sm-block d-md-none d-lg-block">
+<i class="fas fa-user-plus pe-1"></i>Register
+</span>
+</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="/login">
+<span class="d-block" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Login">
+<i class="fas fa-sign-in-alt d-none d-md-block d-lg-none"></i>
+</span>
+<span class="d-sm-block d-md-none d-lg-block">
+<i class="fas fa-sign-in-alt pe-1"></i>Login
+</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+<main role="main">
+<div class="jumbotron">
+<div class="container">
+<h1 id="team-id" data-ctfd-team-id="621">SNHT</h1>
+<div class="pt-2">
+</div>
+<div class="pt-2">
+</div>
+<h2 id="team-place" class="text-center">
+5th
+<small>place</small>
+</h2>
+<h2 id="team-score" class="text-center">
+4434
+<small>points</small>
+</h2>
+</div>
+</div>
+<div class="container">
+<div>
+</div>
+<br>
+<div class="row">
+<div class="col-md-12">
+<h3>Members</h3>
+<table class="table table-striped">
+<thead>
+<tr>
+<td><b>User Name</b></td>
+<td><b>Score</b></td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="/users/1084">
+Blupper
+</a>
+</td>
+<td>2037</td>
+</tr>
+<tr>
+<td>
+<a href="/users/1087">
+xenia
+</a>
+</td>
+<td>0</td>
+</tr>
+<tr>
+<td>
+<a href="/users/1212">
+DayDun
+</a>
+</td>
+<td>1386</td>
+</tr>
+<tr>
+<td>
+<a href="/users/1727">
+qmechanic
+</a>
+</td>
+<td>0</td>
+</tr>
+<tr>
+<td>
+<a href="/users/1731">
+chopingu
+</a>
+</td>
+<td>667</td>
+</tr>
+<tr>
+<td>
+<a href="/users/1800">
+mateuszdrwal
+</a>
+</td>
+<td>118</td>
+</tr>
+<tr>
+<td>
+<a href="/users/1803">
+Quois
+</a>
+</td>
+<td>127</td>
+</tr>
+<tr>
+<td>
+<a href="/users/1874">
+okejlama
+</a>
+</td>
+<td>99</td>
+</tr>
+<tr>
+<td>
+<a href="/users/2222">
+larsh
+</a>
+</td>
+<td>0</td>
+</tr>
+<tr>
+<td>
+<a href="/users/2428">
+nnewram
+</a>
+</td>
+<td>0</td>
+</tr>
+<tr>
+<td>
+<a href="/users/2469">
+s0ra
+</a>
+</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="row">
+<div class="col-md-12">
+<h3>Awards</h3>
+</div>
+<div class="col-md-3 col-sm-6">
+<p class="text-center">
+<i class="award-icon award-None fa-2x"></i> <br>
+<strong>Hint 302</strong>
+</p>
+<p class="text-center">hints</p>
+<p class="text-center">Hint for Am I not root?</p>
+<p class="text-center">0</p>
+</div>
+<div class="col-md-3 col-sm-6">
+<p class="text-center">
+<i class="award-icon award-None fa-2x"></i> <br>
+<strong>Hint 317</strong>
+</p>
+<p class="text-center">hints</p>
+<p class="text-center">Hint for Zapping a Setuid 2</p>
+<p class="text-center">0</p>
+</div>
+<div class="col-md-3 col-sm-6">
+<p class="text-center">
+<i class="award-icon award-None fa-2x"></i> <br>
+<strong>Hint 316</strong>
+</p>
+<p class="text-center">hints</p>
+<p class="text-center">Hint for Zapping a Setuid 2</p>
+<p class="text-center">0</p>
+</div>
+<div class="col-md-3 col-sm-6">
+<p class="text-center">
+<i class="award-icon award-None fa-2x"></i> <br>
+<strong>Hint 304</strong>
+</p>
+<p class="text-center">hints</p>
+<p class="text-center">Hint for Schrodinger&#39;s Cat</p>
+<p class="text-center">0</p>
+</div>
+<div class="col-md-3 col-sm-6">
+<p class="text-center">
+<i class="award-icon award-None fa-2x"></i> <br>
+<strong>Hint 303</strong>
+</p>
+<p class="text-center">hints</p>
+<p class="text-center">Hint for Schrodinger&#39;s Cat</p>
+<p class="text-center">0</p>
+</div>
+<div class="col-md-3 col-sm-6">
+<p class="text-center">
+<i class="award-icon award-None fa-2x"></i> <br>
+<strong>Hint 289</strong>
+</p>
+<p class="text-center">hints</p>
+<p class="text-center">Hint for Tornado Warning</p>
+<p class="text-center">0</p>
+</div>
+<div class="col-md-3 col-sm-6">
+<p class="text-center">
+<i class="award-icon award-None fa-2x"></i> <br>
+<strong>Hint 290</strong>
+</p>
+<p class="text-center">hints</p>
+<p class="text-center">Hint for Tornado Warning</p>
+<p class="text-center">0</p>
+</div>
+<div class="col-md-3 col-sm-6">
+<p class="text-center">
+<i class="award-icon award-None fa-2x"></i> <br>
+<strong>Hint 288</strong>
+</p>
+<p class="text-center">hints</p>
+<p class="text-center">Hint for Schrodinger&#39;s Cat</p>
+<p class="text-center">0</p>
+</div>
+<div class="col-md-3 col-sm-6">
+<p class="text-center">
+<i class="award-icon award-None fa-2x"></i> <br>
+<strong>Hint 287</strong>
+</p>
+<p class="text-center">hints</p>
+<p class="text-center">Hint for Schrodinger&#39;s Cat</p>
+<p class="text-center">0</p>
+</div>
+<div class="col-md-3 col-sm-6">
+<p class="text-center">
+<i class="award-icon award-None fa-2x"></i> <br>
+<strong>Hint 296</strong>
+</p>
+<p class="text-center">hints</p>
+<p class="text-center">Hint for First class mail</p>
+<p class="text-center">0</p>
+</div>
+<div class="col-md-3 col-sm-6">
+<p class="text-center">
+<i class="award-icon award-None fa-2x"></i> <br>
+<strong>Hint 295</strong>
+</p>
+<p class="text-center">hints</p>
+<p class="text-center">Hint for Jonah&#39;s Journal</p>
+<p class="text-center">0</p>
+</div>
+<div class="col-md-3 col-sm-6">
+<p class="text-center">
+<i class="award-icon award-None fa-2x"></i> <br>
+<strong>Hint 294</strong>
+</p>
+<p class="text-center">hints</p>
+<p class="text-center">Hint for What&#39;s for Dinner?</p>
+<p class="text-center">0</p>
+</div>
+<div class="col-md-3 col-sm-6">
+<p class="text-center">
+<i class="award-icon award-None fa-2x"></i> <br>
+<strong>Hint 297</strong>
+</p>
+<p class="text-center">hints</p>
+<p class="text-center">Hint for Finding Jonah?</p>
+<p class="text-center">0</p>
+</div>
+<div class="col-md-3 col-sm-6">
+<p class="text-center">
+<i class="award-icon award-None fa-2x"></i> <br>
+<strong>Hint 280</strong>
+</p>
+<p class="text-center">hints</p>
+<p class="text-center">Hint for Finding Jonah?</p>
+<p class="text-center">0</p>
+</div>
+<div class="col-md-3 col-sm-6">
+<p class="text-center">
+<i class="award-icon award-None fa-2x"></i> <br>
+<strong>Hint 271</strong>
+</p>
+<p class="text-center">hints</p>
+<p class="text-center">Hint for Zapping a Setuid 1</p>
+<p class="text-center">0</p>
+</div>
+<div class="col-md-3 col-sm-6">
+<p class="text-center">
+<i class="award-icon award-None fa-2x"></i> <br>
+<strong>Hint 269</strong>
+</p>
+<p class="text-center">hints</p>
+<p class="text-center">Hint for Finding Jonah?</p>
+<p class="text-center">0</p>
+</div>
+<div class="col-md-3 col-sm-6">
+<p class="text-center">
+<i class="award-icon award-None fa-2x"></i> <br>
+<strong>Hint 266</strong>
+</p>
+<p class="text-center">hints</p>
+<p class="text-center">Hint for What&#39;s for Dinner?</p>
+<p class="text-center">0</p>
+</div>
+<div class="col-md-3 col-sm-6">
+<p class="text-center">
+<i class="award-icon award-None fa-2x"></i> <br>
+<strong>Hint 262</strong>
+</p>
+<p class="text-center">hints</p>
+<p class="text-center">Hint for Tornado Warning</p>
+<p class="text-center">0</p>
+</div>
+<div class="col-md-3 col-sm-6">
+<p class="text-center">
+<i class="award-icon award-None fa-2x"></i> <br>
+<strong>Hint 261</strong>
+</p>
+<p class="text-center">hints</p>
+<p class="text-center">Hint for Tornado Warning</p>
+<p class="text-center">0</p>
+</div>
+<div class="col-md-3 col-sm-6">
+<p class="text-center">
+<i class="award-icon award-None fa-2x"></i> <br>
+<strong>Hint 265</strong>
+</p>
+<p class="text-center">hints</p>
+<p class="text-center">Hint for Finding Artifacts 2</p>
+<p class="text-center">0</p>
+</div>
+<div class="col-md-3 col-sm-6">
+<p class="text-center">
+<i class="award-icon award-None fa-2x"></i> <br>
+<strong>Hint 264</strong>
+</p>
+<p class="text-center">hints</p>
+<p class="text-center">Hint for Finding Artifacts 1</p>
+<p class="text-center">0</p>
+</div>
+<div class="col-md-3 col-sm-6">
+<p class="text-center">
+<i class="award-icon award-None fa-2x"></i> <br>
+<strong>Hint 263</strong>
+</p>
+<p class="text-center">hints</p>
+<p class="text-center">Hint for Finding Artifacts 1</p>
+<p class="text-center">0</p>
+</div>
+</div>
+<br>
+<div class="row">
+<div class="col-md-12">
+<h3>Solves</h3>
+<table class="table table-striped">
+<thead>
+<tr>
+<td class="text-center"><b>Challenge</b></td>
+<td class="d-none d-md-block d-lg-block"><b>Category</b></td>
+<td><b>Value</b></td>
+<td><b>Time</b></td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="text-center">
+<a href="/challenges#Rattler Read-37">
+Rattler Read
+</a>
+</td>
+<td class="d-none d-md-block d-lg-block">pwn</td>
+<td>390</td>
+<td class="solve-time">
+<span data-time="2023-07-02T20:56:06.621989Z"></span>
+</td>
+</tr>
+<tr>
+<td class="text-center">
+<a href="/challenges#pwnykey-16">
+pwnykey
+</a>
+</td>
+<td class="d-none d-md-block d-lg-block">rev</td>
+<td>400</td>
+<td class="solve-time">
+<span data-time="2023-07-02T17:04:57.170319Z"></span>
+</td>
+</tr>
+<tr>
+<td class="text-center">
+<a href="/challenges#Schrodinger&#39;s Cat-38">
+Schrodinger&#39;s Cat
+</a>
+</td>
+<td class="d-none d-md-block d-lg-block">misc</td>
+<td>381</td>
+<td class="solve-time">
+<span data-time="2023-07-02T14:26:22.197170Z"></span>
+</td>
+</tr>
+<tr>
+<td class="text-center">
+<a href="/challenges#futuredisk2-28">
+futuredisk2
+</a>
+</td>
+<td class="d-none d-md-block d-lg-block">web</td>
+<td>457</td>
+<td class="solve-time">
+<span data-time="2023-07-02T11:36:13.107566Z"></span>
+</td>
+</tr>
+<tr>
+<td class="text-center">
+<a href="/challenges#Virophage-14">
+Virophage
+</a>
+</td>
+<td class="d-none d-md-block d-lg-block">pwn</td>
+<td>301</td>
+<td class="solve-time">
+<span data-time="2023-07-02T11:06:13.088534Z"></span>
+</td>
+</tr>
+<tr>
+<td class="text-center">
+<a href="/challenges#Feedback Survey-39">
+Feedback Survey
+</a>
+</td>
+<td class="d-none d-md-block d-lg-block">misc</td>
+<td>50</td>
+<td class="solve-time">
+<span data-time="2023-07-02T07:08:22.848251Z"></span>
+</td>
+</tr>
+<tr>
+<td class="text-center">
+<a href="/challenges#vimjail2-2">
+vimjail2
+</a>
+</td>
+<td class="d-none d-md-block d-lg-block">misc</td>
+<td>50</td>
+<td class="solve-time">
+<span data-time="2023-07-01T22:07:13.436944Z"></span>
+</td>
+</tr>
+<tr>
+<td class="text-center">
+<a href="/challenges#vimjail2.5-36">
+vimjail2.5
+</a>
+</td>
+<td class="d-none d-md-block d-lg-block">misc</td>
+<td>91</td>
+<td class="solve-time">
+<span data-time="2023-07-01T22:00:18.565298Z"></span>
+</td>
+</tr>
+<tr>
+<td class="text-center">
+<a href="/challenges#vimjail1.5-35">
+vimjail1.5
+</a>
+</td>
+<td class="d-none d-md-block d-lg-block">misc</td>
+<td>57</td>
+<td class="solve-time">
+<span data-time="2023-07-01T20:31:46.378187Z"></span>
+</td>
+</tr>
+<tr>
+<td class="text-center">
+<a href="/challenges#vimjail1-1">
+vimjail1
+</a>
+</td>
+<td class="d-none d-md-block d-lg-block">misc</td>
+<td>50</td>
+<td class="solve-time">
+<span data-time="2023-07-01T20:30:41.195476Z"></span>
+</td>
+</tr>
+<tr>
+<td class="text-center">
+<a href="/challenges#First class mail-12">
+First class mail
+</a>
+</td>
+<td class="d-none d-md-block d-lg-block">osint</td>
+<td>50</td>
+<td class="solve-time">
+<span data-time="2023-07-01T19:57:25.083209Z"></span>
+</td>
+</tr>
+<tr>
+<td class="text-center">
+<a href="/challenges#Tornado Warning-5">
+Tornado Warning
+</a>
+</td>
+<td class="d-none d-md-block d-lg-block">misc</td>
+<td>117</td>
+<td class="solve-time">
+<span data-time="2023-07-01T19:50:40.035708Z"></span>
+</td>
+</tr>
+<tr>
+<td class="text-center">
+<a href="/challenges#adminplz-29">
+adminplz
+</a>
+</td>
+<td class="d-none d-md-block d-lg-block">web</td>
+<td>322</td>
+<td class="solve-time">
+<span data-time="2023-07-01T19:31:29.696970Z"></span>
+</td>
+</tr>
+<tr>
+<td class="text-center">
+<a href="/challenges#Finding Jonah?-9">
+Finding Jonah?
+</a>
+</td>
+<td class="d-none d-md-block d-lg-block">osint</td>
+<td>50</td>
+<td class="solve-time">
+<span data-time="2023-07-01T17:50:28.195335Z"></span>
+</td>
+</tr>
+<tr>
+<td class="text-center">
+<a href="/challenges#Jonah&#39;s Journal-11">
+Jonah&#39;s Journal
+</a>
+</td>
+<td class="d-none d-md-block d-lg-block">osint</td>
+<td>50</td>
+<td class="solve-time">
+<span data-time="2023-07-01T17:48:27.933180Z"></span>
+</td>
+</tr>
+<tr>
+<td class="text-center">
+<a href="/challenges#What&#39;s for Dinner?-8">
+What&#39;s for Dinner?
+</a>
+</td>
+<td class="d-none d-md-block d-lg-block">osint</td>
+<td>50</td>
+<td class="solve-time">
+<span data-time="2023-07-01T17:29:34.616011Z"></span>
+</td>
+</tr>
+<tr>
+<td class="text-center">
+<a href="/challenges#Zapping a Setuid 1-15">
+Zapping a Setuid 1
+</a>
+</td>
+<td class="d-none d-md-block d-lg-block">pwn</td>
+<td>127</td>
+<td class="solve-time">
+<span data-time="2023-07-01T16:32:46.693151Z"></span>
+</td>
+</tr>
+<tr>
+<td class="text-center">
+<a href="/challenges#Finding Artifacts 2-7">
+Finding Artifacts 2
+</a>
+</td>
+<td class="d-none d-md-block d-lg-block">osint</td>
+<td>50</td>
+<td class="solve-time">
+<span data-time="2023-07-01T14:43:48.943672Z"></span>
+</td>
+</tr>
+<tr>
+<td class="text-center">
+<a href="/challenges#Corny Kernel-22">
+Corny Kernel
+</a>
+</td>
+<td class="d-none d-md-block d-lg-block">misc</td>
+<td>50</td>
+<td class="solve-time">
+<span data-time="2023-07-01T13:14:18.797023Z"></span>
+</td>
+</tr>
+<tr>
+<td class="text-center">
+<a href="/challenges#Chainmail-31">
+Chainmail
+</a>
+</td>
+<td class="d-none d-md-block d-lg-block">pwn</td>
+<td>50</td>
+<td class="solve-time">
+<span data-time="2023-07-01T13:05:48.103030Z"></span>
+</td>
+</tr>
+<tr>
+<td class="text-center">
+<a href="/challenges#geoguesser-10">
+geoguesser
+</a>
+</td>
+<td class="d-none d-md-block d-lg-block">rev</td>
+<td>181</td>
+<td class="solve-time">
+<span data-time="2023-07-01T12:45:05.947298Z"></span>
+</td>
+</tr>
+<tr>
+<td class="text-center">
+<a href="/challenges#peanut-xss-30">
+peanut-xss
+</a>
+</td>
+<td class="d-none d-md-block d-lg-block">web</td>
+<td>99</td>
+<td class="solve-time">
+<span data-time="2023-07-01T12:28:18.512915Z"></span>
+</td>
+</tr>
+<tr>
+<td class="text-center">
+<a href="/challenges#futuredisk-27">
+futuredisk
+</a>
+</td>
+<td class="d-none d-md-block d-lg-block">web</td>
+<td>332</td>
+<td class="solve-time">
+<span data-time="2023-07-01T12:04:16.518551Z"></span>
+</td>
+</tr>
+<tr>
+<td class="text-center">
+<a href="/challenges#crack_the_safe-19">
+crack_the_safe
+</a>
+</td>
+<td class="d-none d-md-block d-lg-block">crypto</td>
+<td>69</td>
+<td class="solve-time">
+<span data-time="2023-07-01T11:22:21.223808Z"></span>
+</td>
+</tr>
+<tr>
+<td class="text-center">
+<a href="/challenges#Finding Artifacts 1-6">
+Finding Artifacts 1
+</a>
+</td>
+<td class="d-none d-md-block d-lg-block">osint</td>
+<td>50</td>
+<td class="solve-time">
+<span data-time="2023-07-01T11:06:36.567971Z"></span>
+</td>
+</tr>
+<tr>
+<td class="text-center">
+<a href="/challenges#Fast Calculator-26">
+Fast Calculator
+</a>
+</td>
+<td class="d-none d-md-block d-lg-block">rev</td>
+<td>197</td>
+<td class="solve-time">
+<span data-time="2023-07-01T10:54:38.632012Z"></span>
+</td>
+</tr>
+<tr>
+<td class="text-center">
+<a href="/challenges#Group Projection-34">
+Group Projection
+</a>
+</td>
+<td class="d-none d-md-block d-lg-block">crypto</td>
+<td>50</td>
+<td class="solve-time">
+<span data-time="2023-07-01T10:18:58.594534Z"></span>
+</td>
+</tr>
+<tr>
+<td class="text-center">
+<a href="/challenges#Join our Discord-33">
+Join our Discord
+</a>
+</td>
+<td class="d-none d-md-block d-lg-block">misc</td>
+<td>1</td>
+<td class="solve-time">
+<span data-time="2023-07-01T09:53:29.963026Z"></span>
+</td>
+</tr>
+<tr>
+<td class="text-center">
+<a href="/challenges#Morphing Time-21">
+Morphing Time
+</a>
+</td>
+<td class="d-none d-md-block d-lg-block">crypto</td>
+<td>50</td>
+<td class="solve-time">
+<span data-time="2023-07-01T09:40:30.726597Z"></span>
+</td>
+</tr>
+<tr>
+<td class="text-center">
+<a href="/challenges#vmwhere2-4">
+vmwhere2
+</a>
+</td>
+<td class="d-none d-md-block d-lg-block">rev</td>
+<td>62</td>
+<td class="solve-time">
+<span data-time="2023-07-01T09:32:44.622453Z"></span>
+</td>
+</tr>
+<tr>
+<td class="text-center">
+<a href="/challenges#Group Project-20">
+Group Project
+</a>
+</td>
+<td class="d-none d-md-block d-lg-block">crypto</td>
+<td>50</td>
+<td class="solve-time">
+<span data-time="2023-07-01T09:14:32.370465Z"></span>
+</td>
+</tr>
+<tr>
+<td class="text-center">
+<a href="/challenges#Three-Time Pad-13">
+Three-Time Pad
+</a>
+</td>
+<td class="d-none d-md-block d-lg-block">crypto</td>
+<td>50</td>
+<td class="solve-time">
+<span data-time="2023-07-01T08:54:05.439812Z"></span>
+</td>
+</tr>
+<tr>
+<td class="text-center">
+<a href="/challenges#At Home-18">
+At Home
+</a>
+</td>
+<td class="d-none d-md-block d-lg-block">crypto</td>
+<td>50</td>
+<td class="solve-time">
+<span data-time="2023-07-01T08:47:27.258184Z"></span>
+</td>
+</tr>
+<tr>
+<td class="text-center">
+<a href="/challenges#vmwhere1-3">
+vmwhere1
+</a>
+</td>
+<td class="d-none d-md-block d-lg-block">rev</td>
+<td>50</td>
+<td class="solve-time">
+<span data-time="2023-07-01T08:02:12.278305Z"></span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="clearfix"></div>
+<div class="row" x-data="TeamGraphs">
+<div class="col-md-6 d-none d-md-block d-lg-block py-4">
+<div class="progress">
+<div class="progress-bar" role="progressbar" :style="{ width: `${getSolvePercentage()}%`, 'background-color': 'rgb(0, 209, 64)' }">
+</div>
+<div class="progress-bar" role="progressbar" :style="{ width: `${getFailPercentage()}%`, 'background-color': 'rgb(207, 38, 0)' }">
+</div>
+</div>
+<div class="ps-2 float-start">
+<svg height="16" width="16">
+<circle cx="8" cy="8" r="5" fill="rgb(0, 209, 64)" />
+</svg>
+<small x-text="`Solves (${getSolvePercentage()}%)`"></small>
+</div>
+<div class="ps-2 float-start">
+<svg height="16" width="16">
+<circle cx="8" cy="8" r="5" fill="rgb(207, 38, 0)" />
+</svg>
+<small x-text="`Fails (${getFailPercentage()}%)`"></small>
+</div>
+</div>
+<div class="col-md-6 d-none d-md-block d-lg-block py-4">
+<div class="progress">
+<template x-for="category in getCategoryBreakdown()" :key="category.name">
+<div class="progress-bar" role="progressbar" :style="{ width: `${category.percent}%`, 'background-color': category.color }">
+</div>
+</template>
+</div>
+<template x-for="category in getCategoryBreakdown()" :key="category.name">
+<div class="ps-2 float-start">
+<svg height="16" width="16">
+<circle cx="8" cy="8" r="5" :fill="category.color" />
+</svg>
+<small x-text="`${category.name} (${category.percent}%)`"></small>
+</div>
+</template>
+</div>
+<br class="clearfix">
+<div class="col-md-12 d-none d-md-block d-lg-block">
+<div id="score-graph" x-ref="scoregraph" class="w-100 d-flex align-items-center">
+<div class="text-center w-100">
+<i class="fas fa-circle-notch fa-spin fa-3x fa-fw spinner"></i>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="footer">
+<div class="container text-center">
+<a href="https://ctfd.io" class="text-secondary">
+<small class="text-muted">Powered by CTFd</small>
+</a>
+</div>
+</footer>
+<div x-data>
+<div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+<div x-ref="toast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+<div class="toast-header">
+<strong class="me-auto" x-text="$store.toast.title"></strong>
+<small>just now</small>
+<button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+</div>
+<div class="toast-body" x-html="$store.toast.html">
+</div>
+</div>
+</div>
+</div>
+<div x-data>
+<div class="modal" x-ref="modal" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title" x-text="$store.modal.title"></h5>
+<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<div class="modal-body">
+<p x-html="$store.modal.html"></p>
+</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-primary" data-bs-dismiss="modal">Got it!</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+      window.TEAM =
+      {"account_id": 621, "id": 621, "name": "SNHT", "type": "team"}
+  </script>
+<script defer type="module" src="/themes/uiuctf-2023-ctfd-theme/static/assets/index.5a84c1a7.js"></script><script defer type="module" src="/themes/uiuctf-2023-ctfd-theme/static/assets/userscore.183e251d.js"></script><script defer type="module" src="/themes/uiuctf-2023-ctfd-theme/static/assets/index.4d677054.js"></script><script defer type="module" src="/themes/uiuctf-2023-ctfd-theme/static/assets/echarts.128204f2.js"></script><script defer type="module" src="/themes/uiuctf-2023-ctfd-theme/static/assets/teams_public.c3274b6f.js"></script>
+</body>
+</html>

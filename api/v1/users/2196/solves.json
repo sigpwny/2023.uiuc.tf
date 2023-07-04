@@ -1,0 +1,1 @@
+{"success": true, "data": [{"team": {"id": 799, "name": "HackPack"}, "id": 27714, "user": {"id": 2196, "name": "Sodium-matroshkya-labs"}, "challenge_id": 29, "type": "correct", "date": "2023-07-02T14:59:59.081198+00:00", "challenge": {"id": 29, "category": "web", "value": 322, "name": "adminplz"}}], "meta": {"count": 1}}

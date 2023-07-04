@@ -1,0 +1,1 @@
+{"success": true, "data": [{"type": "correct", "challenge_id": 11, "challenge": {"name": "Jonah's Journal", "id": 11, "value": 50, "category": "osint"}, "user": {"name": "Floppyfish", "id": 1315}, "date": "2023-07-01T02:41:19.813622+00:00", "id": 4597, "team": {"name": "EZClap", "id": 98}}], "meta": {"count": 1}}

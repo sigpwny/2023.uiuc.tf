@@ -1,0 +1,1 @@
+{"success": true, "data": [{"team": {"id": 1025, "name": "Fat Earth"}, "id": 22563, "user": {"id": 2230, "name": "master"}, "challenge_id": 33, "type": "correct", "date": "2023-07-01T21:58:01.258837+00:00", "challenge": {"id": 33, "category": "misc", "value": 1, "name": "Join our Discord"}}], "meta": {"count": 1}}

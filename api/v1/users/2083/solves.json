@@ -1,0 +1,1 @@
+{"success": true, "data": [{"team": {"id": 484, "name": "Disqualified"}, "id": 20260, "user": {"id": 2083, "name": "amir"}, "challenge_id": 11, "type": "correct", "date": "2023-07-01T18:26:50.275014+00:00", "challenge": {"id": 11, "category": "osint", "value": 50, "name": "Jonah's Journal"}}], "meta": {"count": 1}}

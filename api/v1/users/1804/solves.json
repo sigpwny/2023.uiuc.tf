@@ -1,0 +1,1 @@
+{"success": true, "data": [{"team": {"id": 71, "name": "Hopper's Roppers"}, "id": 17691, "user": {"id": 1804, "name": "JLN"}, "challenge_id": 8, "type": "correct", "date": "2023-07-01T15:30:22.186221+00:00", "challenge": {"id": 8, "category": "osint", "value": 50, "name": "What's for Dinner?"}}], "meta": {"count": 1}}

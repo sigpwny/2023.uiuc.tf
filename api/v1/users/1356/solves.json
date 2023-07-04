@@ -1,0 +1,1 @@
+{"success": true, "data": [{"team": {"id": 749, "name": "Discovery"}, "id": 2999, "user": {"id": 1356, "name": "Discovery"}, "challenge_id": 31, "type": "correct", "date": "2023-07-01T01:42:53.511303+00:00", "challenge": {"id": 31, "category": "pwn", "value": 50, "name": "Chainmail"}}], "meta": {"count": 1}}

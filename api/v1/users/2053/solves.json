@@ -1,0 +1,1 @@
+{"success": true, "data": [{"team": {"id": 303, "name": "Audax Invictus"}, "id": 17100, "user": {"id": 2053, "name": "Spipi"}, "challenge_id": 31, "type": "correct", "date": "2023-07-01T14:52:54.475161+00:00", "challenge": {"id": 31, "category": "pwn", "value": 50, "name": "Chainmail"}}], "meta": {"count": 1}}

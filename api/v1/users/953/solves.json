@@ -1,0 +1,1 @@
+{"success": true, "data": [{"team": {"id": 219, "name": "blahaj"}, "id": 6702, "user": {"id": 953, "name": "picokatx"}, "challenge_id": 11, "type": "correct", "date": "2023-07-01T04:32:54.711534+00:00", "challenge": {"id": 11, "category": "osint", "value": 50, "name": "Jonah's Journal"}}], "meta": {"count": 1}}

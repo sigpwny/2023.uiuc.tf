@@ -1,0 +1,1 @@
+{"success": true, "data": [{"team": {"id": 1067, "name": "XingHeRuMeng"}, "id": 24357, "user": {"id": 2017, "name": "XingHeRuMeng"}, "challenge_id": 31, "type": "correct", "date": "2023-07-02T02:47:35.363534+00:00", "challenge": {"id": 31, "category": "pwn", "value": 50, "name": "Chainmail"}}], "meta": {"count": 1}}

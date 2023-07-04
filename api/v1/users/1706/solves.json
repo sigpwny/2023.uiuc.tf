@@ -1,0 +1,1 @@
+{"success": true, "data": [{"team": {"id": 619, "name": "Brunnerne"}, "id": 11840, "user": {"id": 1706, "name": "JeppeSec"}, "challenge_id": 6, "type": "correct", "date": "2023-07-01T09:59:58.285063+00:00", "challenge": {"id": 6, "category": "osint", "value": 50, "name": "Finding Artifacts 1"}}], "meta": {"count": 1}}

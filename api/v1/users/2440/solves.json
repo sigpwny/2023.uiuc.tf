@@ -1,0 +1,1 @@
+{"success": true, "data": [{"team": {"id": 1300, "name": "InfosecIITG"}, "id": 28901, "user": {"id": 2440, "name": "arbitrary_aman"}, "challenge_id": 18, "type": "correct", "date": "2023-07-02T18:46:13.747444+00:00", "challenge": {"id": 18, "category": "crypto", "value": 50, "name": "At Home"}}], "meta": {"count": 1}}

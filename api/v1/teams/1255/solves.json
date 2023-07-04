@@ -1,0 +1,1 @@
+{"success": true, "data": [{"team": {"id": 1255, "name": "pjwhn"}, "id": 28125, "user": {"id": 2358, "name": "pjwhn"}, "challenge_id": 15, "type": "correct", "date": "2023-07-02T16:24:46.174551+00:00", "challenge": {"id": 15, "category": "pwn", "value": 127, "name": "Zapping a Setuid 1"}}], "meta": {"count": 1}}

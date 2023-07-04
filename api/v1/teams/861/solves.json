@@ -1,0 +1,1 @@
+{"success": true, "data": [{"type": "correct", "challenge_id": 30, "challenge": {"name": "peanut-xss", "id": 30, "value": 99, "category": "web"}, "user": {"name": "whatisctf", "id": 1578}, "date": "2023-07-02T16:11:52.059338+00:00", "id": 28054, "team": {"name": "__xor__", "id": 861}}], "meta": {"count": 1}}

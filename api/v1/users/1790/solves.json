@@ -1,0 +1,1 @@
+{"success": true, "data": [{"team": {"id": 535, "name": "mhackeroni"}, "id": 14726, "user": {"id": 1790, "name": "Capo80"}, "challenge_id": 10, "type": "correct", "date": "2023-07-01T12:44:56.281458+00:00", "challenge": {"id": 10, "category": "rev", "value": 181, "name": "geoguesser"}}], "meta": {"count": 1}}

@@ -1,0 +1,1 @@
+{"success": true, "data": [{"team": {"id": 1319, "name": "HackUTT"}, "id": 29477, "user": {"id": 2466, "name": "kepler"}, "challenge_id": 33, "type": "correct", "date": "2023-07-02T21:05:48.472377+00:00", "challenge": {"id": 33, "category": "misc", "value": 1, "name": "Join our Discord"}}], "meta": {"count": 1}}

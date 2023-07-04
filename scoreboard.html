@@ -1,0 +1,7516 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>UIUCTF 2023</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" href="/files/abe7b3ed7c9b36de10a3c74ea37c5c4d/uiuctf-2023-pwny-favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/themes/uiuctf-2023-ctfd-theme/static/assets/main.776ccc78.css">
+<script type="text/javascript">
+      window.init = {
+          'urlRoot': "",
+          'csrfNonce': "452d4ae62ab01dea2535a84ab331cc48ea1a09386448de09b3882ba73235355e",
+          'userMode': "teams",
+          'userId': 0,
+          'userName': null,
+          'userEmail': null,
+          'teamId': null, 
+          'teamName': null,
+          'start': 1688170500,
+          'end': 1688343300,
+          'themeSettings': null,
+          'eventSounds': [
+            "/themes/core/static/sounds/notification.webm",
+            "/themes/core/static/sounds/notification.mp3",
+          ],
+      }
+  </script>
+</head>
+<body>
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+<div class="container">
+<a href="/" class="navbar-brand">
+UIUCTF 2023
+</a>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#base-navbars" aria-controls="base-navbars" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="base-navbars">
+<ul class="navbar-nav me-auto">
+<li class="nav-item">
+<a class="nav-link" href="/ctfd">CTFd Home</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="/users">Users</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="/teams">Teams</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="/scoreboard">Scoreboard</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="/challenges">Challenges</a>
+</li>
+</ul>
+<hr class="d-sm-flex d-md-flex d-lg-none">
+<ul class="navbar-nav ms-md-auto d-block d-sm-flex d-md-flex">
+<li class="nav-item">
+<a class="nav-link" href="/register">
+<span class="d-block" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Register">
+<i class="fas fa-user-plus d-none d-md-block d-lg-none"></i>
+</span>
+<span class="d-sm-block d-md-none d-lg-block">
+<i class="fas fa-user-plus pe-1"></i>Register
+</span>
+</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="/login">
+<span class="d-block" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Login">
+<i class="fas fa-sign-in-alt d-none d-md-block d-lg-none"></i>
+</span>
+<span class="d-sm-block d-md-none d-lg-block">
+<i class="fas fa-sign-in-alt pe-1"></i>Login
+</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+<main role="main">
+<div class="jumbotron">
+<div class="container">
+<h1>Scoreboard</h1>
+</div>
+</div>
+<div class="container">
+<div id="score-graph" class="d-flex align-items-center" x-data="ScoreboardDetail" x-ref="scoregraph">
+<div class="col-md-12 text-center">
+<i class="fas fa-circle-notch fa-spin fa-3x fa-fw spinner"></i>
+</div>
+</div>
+
+<div class="d-flex flex-row">
+<div class="d-flex flex-column flex-grow-1">
+<div class="w95-input-border">
+<table class="table table-striped">
+<thead>
+<tr>
+<td style="width: 10px"><b>Place</b></td>
+<td><b>Team</b></td>
+<td><b>Score</b></td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th scope="row" class="text-center">1</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 782}); event.stopPropagation();">
+Blew Wotah
+</a>
+</td>
+<td>5121</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">2</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 319}); event.stopPropagation();">
+Spotless
+</a>
+</td>
+<td>4848</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">3</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 652}); event.stopPropagation();">
+Project Sekai
+</a>
+</td>
+<td>4712</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">4</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 13}); event.stopPropagation();">
+/mnt/ain
+</a>
+</td>
+<td>4434</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">5</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 621}); event.stopPropagation();">
+SNHT
+</a>
+</td>
+<td>4434</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">6</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 174}); event.stopPropagation();">
+Maple Bacon
+</a>
+</td>
+<td>4419</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">7</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 403}); event.stopPropagation();">
+Babbage Patch Kids
+</a>
+</td>
+<td>3896</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">8</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 37}); event.stopPropagation();">
+./Vespiary
+</a>
+</td>
+<td>3849</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">9</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1182}); event.stopPropagation();">
+796f75
+</a>
+</td>
+<td>3676</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">10</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 374}); event.stopPropagation();">
+Zer0Tolerance
+</a>
+</td>
+<td>3596</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">11</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 352}); event.stopPropagation();">
+cat :flag_kr:
+</a>
+</td>
+<td>3265</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">12</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 256}); event.stopPropagation();">
+ARESx
+</a>
+</td>
+<td>3255</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">13</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 535}); event.stopPropagation();">
+mhackeroni
+</a>
+</td>
+<td>3166</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">14</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 9}); event.stopPropagation();">
+r3kapig
+</a>
+</td>
+<td>2834</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">15</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 89}); event.stopPropagation();">
+PFS
+</a>
+</td>
+<td>2814</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">16</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 611}); event.stopPropagation();">
+Kalmarunionen
+</a>
+</td>
+<td>2709</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">17</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 148}); event.stopPropagation();">
+justCaTchFish
+</a>
+</td>
+<td>2651</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">18</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 384}); event.stopPropagation();">
+idek
+</a>
+</td>
+<td>2503</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">19</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 326}); event.stopPropagation();">
+Radboud Institute of Pwning
+</a>
+</td>
+<td>2491</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">20</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 653}); event.stopPropagation();">
+The Flat Network Society
+</a>
+</td>
+<td>2470</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">21</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 79}); event.stopPropagation();">
+IrisSec
+</a>
+</td>
+<td>2295</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">22</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 27}); event.stopPropagation();">
+m1cr0$oft 0ff1c3
+</a>
+</td>
+<td>2034</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">23</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 377}); event.stopPropagation();">
+TCP1P
+</a>
+</td>
+<td>1977</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">24</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 263}); event.stopPropagation();">
+b01lers
+</a>
+</td>
+<td>1936</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">25</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 345}); event.stopPropagation();">
+Black Bauhinia
+</a>
+</td>
+<td>1724</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">26</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 705}); event.stopPropagation();">
+NUSHmallows
+</a>
+</td>
+<td>1702</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">27</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 244}); event.stopPropagation();">
+.hidden
+</a>
+</td>
+<td>1696</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">28</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 904}); event.stopPropagation();">
+dogtal
+</a>
+</td>
+<td>1673</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">29</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 591}); event.stopPropagation();">
+ENOFLAG
+</a>
+</td>
+<td>1625</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">30</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 165}); event.stopPropagation();">
+Squid Proxy Lovers
+</a>
+</td>
+<td>1588</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">31</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 562}); event.stopPropagation();">
+HeroisDoMar
+</a>
+</td>
+<td>1557</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">32</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 589}); event.stopPropagation();">
+Cryptonite
+</a>
+</td>
+<td>1500</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">33</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 502}); event.stopPropagation();">
+L3ak
+</a>
+</td>
+<td>1486</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">34</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 357}); event.stopPropagation();">
+decipher
+</a>
+</td>
+<td>1475</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">35</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 620}); event.stopPropagation();">
+polygl0ts
+</a>
+</td>
+<td>1467</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">36</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 642}); event.stopPropagation();">
+Social Engineering Experts
+</a>
+</td>
+<td>1442</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">37</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 415}); event.stopPropagation();">
+InfoSecIITR
+</a>
+</td>
+<td>1418</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">38</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 38}); event.stopPropagation();">
+CyberTaskForce Zero
+</a>
+</td>
+<td>1417</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">39</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 398}); event.stopPropagation();">
+PBR | UCLA
+</a>
+</td>
+<td>1336</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">40</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 640}); event.stopPropagation();">
+ret2rev
+</a>
+</td>
+<td>1327</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">41</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 98}); event.stopPropagation();">
+EZClap
+</a>
+</td>
+<td>1298</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">42</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 64}); event.stopPropagation();">
+42Roma
+</a>
+</td>
+<td>1277</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">43</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 107}); event.stopPropagation();">
+Arr3stY0u
+</a>
+</td>
+<td>1260</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">44</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 307}); event.stopPropagation();">
+NorskeNokkelsnikere
+</a>
+</td>
+<td>1247</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">45</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 139}); event.stopPropagation();">
+ph1sher
+</a>
+</td>
+<td>1198</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">46</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 96}); event.stopPropagation();">
+CVE2K9
+</a>
+</td>
+<td>1148</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">47</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 360}); event.stopPropagation();">
+A.k.a.t.s.u.k.i
+</a>
+</td>
+<td>1141</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">48</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 595}); event.stopPropagation();">
+TTT
+</a>
+</td>
+<td>1130</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">49</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 911}); event.stopPropagation();">
+MadrHacks
+</a>
+</td>
+<td>1129</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">50</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 556}); event.stopPropagation();">
+phis1Ng__
+</a>
+</td>
+<td>1116</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">51</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 469}); event.stopPropagation();">
+Cyber Dark Inferno
+</a>
+</td>
+<td>1112</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">52</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 336}); event.stopPropagation();">
+The Council of Sheep
+</a>
+</td>
+<td>1099</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">53</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 73}); event.stopPropagation();">
+th3_r0n1ns
+</a>
+</td>
+<td>1097</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">54</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 512}); event.stopPropagation();">
+coldboots
+</a>
+</td>
+<td>1085</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">55</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 538}); event.stopPropagation();">
+Sloppy Joe Pirates
+</a>
+</td>
+<td>1076</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">56</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1020}); event.stopPropagation();">
+Wesserboy
+</a>
+</td>
+<td>1072</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">57</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 62}); event.stopPropagation();">
+Ph0t1n1a
+</a>
+</td>
+<td>1055</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">58</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 61}); event.stopPropagation();">
+UofTCTF
+</a>
+</td>
+<td>1051</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">59</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 198}); event.stopPropagation();">
+wakatta
+</a>
+</td>
+<td>1048</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">60</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 641}); event.stopPropagation();">
+H_More
+</a>
+</td>
+<td>1048</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">61</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 36}); event.stopPropagation();">
+jelly.jar
+</a>
+</td>
+<td>1018</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">62</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 155}); event.stopPropagation();">
+acdwas
+</a>
+</td>
+<td>977</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">63</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 248}); event.stopPropagation();">
+xXxpassword123xXx
+</a>
+</td>
+<td>961</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">64</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 296}); event.stopPropagation();">
+abbabaab
+</a>
+</td>
+<td>949</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">65</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 197}); event.stopPropagation();">
+N1c3Try0xFF
+</a>
+</td>
+<td>938</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">66</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 433}); event.stopPropagation();">
+bi0s
+</a>
+</td>
+<td>931</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">67</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 755}); event.stopPropagation();">
+🧸
+</a>
+</td>
+<td>929</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">68</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 925}); event.stopPropagation();">
+zazolcgeslajazn
+</a>
+</td>
+<td>924</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">69</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1016}); event.stopPropagation();">
+d4rkc0de
+</a>
+</td>
+<td>918</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">70</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 799}); event.stopPropagation();">
+HackPack
+</a>
+</td>
+<td>907</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">71</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 258}); event.stopPropagation();">
+DaishoSec
+</a>
+</td>
+<td>899</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">72</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 179}); event.stopPropagation();">
+amongus - littledragonbun
+</a>
+</td>
+<td>867</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">73</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 483}); event.stopPropagation();">
+0V3RFL0W
+</a>
+</td>
+<td>858</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">74</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 219}); event.stopPropagation();">
+blahaj
+</a>
+</td>
+<td>851</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">75</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 152}); event.stopPropagation();">
+AirOverflow
+</a>
+</td>
+<td>849</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">76</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 212}); event.stopPropagation();">
+p3rs!st
+</a>
+</td>
+<td>849</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">77</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1165}); event.stopPropagation();">
+CYB3RBULL1ES
+</a>
+</td>
+<td>849</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">78</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 877}); event.stopPropagation();">
+RumbleInTheJungle
+</a>
+</td>
+<td>845</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">79</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 93}); event.stopPropagation();">
+flagbot
+</a>
+</td>
+<td>844</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">80</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 412}); event.stopPropagation();">
+BKISC
+</a>
+</td>
+<td>831</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">81</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 40}); event.stopPropagation();">
+c00c00r00c00
+</a>
+</td>
+<td>820</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">82</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 43}); event.stopPropagation();">
+GCC
+</a>
+</td>
+<td>820</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">83</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 264}); event.stopPropagation();">
+TeamC8
+</a>
+</td>
+<td>813</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">84</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 162}); event.stopPropagation();">
+Elite.sa
+</a>
+</td>
+<td>801</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">85</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 463}); event.stopPropagation();">
+upbhack
+</a>
+</td>
+<td>799</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">86</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 358}); event.stopPropagation();">
+allyourflagsbelongtous
+</a>
+</td>
+<td>799</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">87</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 51}); event.stopPropagation();">
+cyberia
+</a>
+</td>
+<td>799</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">88</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 576}); event.stopPropagation();">
+wizbiz
+</a>
+</td>
+<td>799</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">89</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 204}); event.stopPropagation();">
+Hacklava
+</a>
+</td>
+<td>782</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">90</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 575}); event.stopPropagation();">
+Kava Bar Strobe Party
+</a>
+</td>
+<td>778</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">91</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 583}); event.stopPropagation();">
+exec
+</a>
+</td>
+<td>768</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">92</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 724}); event.stopPropagation();">
+SIGINT
+</a>
+</td>
+<td>763</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">93</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 351}); event.stopPropagation();">
+beep boop boiz
+</a>
+</td>
+<td>763</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">94</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 4}); event.stopPropagation();">
+Hacktualizers.EXE
+</a>
+</td>
+<td>751</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">95</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 293}); event.stopPropagation();">
+Team Nick
+</a>
+</td>
+<td>751</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">96</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 603}); event.stopPropagation();">
+squ1rrel
+</a>
+</td>
+<td>751</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">97</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1071}); event.stopPropagation();">
+m00nl1ght_5h4d0w
+</a>
+</td>
+<td>751</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">98</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 109}); event.stopPropagation();">
+KerKerYuan
+</a>
+</td>
+<td>749</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">99</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 486}); event.stopPropagation();">
+EXOrcism
+</a>
+</td>
+<td>749</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">100</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 207}); event.stopPropagation();">
+Emu Exploit
+</a>
+</td>
+<td>744</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">101</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 234}); event.stopPropagation();">
+3r17qu3_4rcu5
+</a>
+</td>
+<td>744</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">102</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1037}); event.stopPropagation();">
+madStacks
+</a>
+</td>
+<td>740</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">103</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 801}); event.stopPropagation();">
+RUSEC
+</a>
+</td>
+<td>720</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">104</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1046}); event.stopPropagation();">
+pwnlentoni
+</a>
+</td>
+<td>720</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">105</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 467}); event.stopPropagation();">
+Davidpb
+</a>
+</td>
+<td>713</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">106</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 831}); event.stopPropagation();">
+HCS
+</a>
+</td>
+<td>708</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">107</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 138}); event.stopPropagation();">
+HACKTORIA
+</a>
+</td>
+<td>701</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">108</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 477}); event.stopPropagation();">
+1NS0MN14
+</a>
+</td>
+<td>701</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">109</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 20}); event.stopPropagation();">
+BeginnersSec
+</a>
+</td>
+<td>701</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">110</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 629}); event.stopPropagation();">
+Weak But Leet
+</a>
+</td>
+<td>701</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">111</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 679}); event.stopPropagation();">
+Hackasaurus Rex
+</a>
+</td>
+<td>701</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">112</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 520}); event.stopPropagation();">
+taln
+</a>
+</td>
+<td>699</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">113</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 630}); event.stopPropagation();">
+ReTry
+</a>
+</td>
+<td>691</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">114</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 762}); event.stopPropagation();">
+Iron Shark
+</a>
+</td>
+<td>682</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">115</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 316}); event.stopPropagation();">
+purf3ct
+</a>
+</td>
+<td>671</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">116</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 303}); event.stopPropagation();">
+Audax Invictus
+</a>
+</td>
+<td>663</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">117</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 988}); event.stopPropagation();">
+born2scan
+</a>
+</td>
+<td>658</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">118</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1186}); event.stopPropagation();">
+roll
+</a>
+</td>
+<td>652</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">119</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 618}); event.stopPropagation();">
+CyberSpace
+</a>
+</td>
+<td>651</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">120</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 510}); event.stopPropagation();">
+Bits &amp; Pieces
+</a>
+</td>
+<td>651</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">121</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 779}); event.stopPropagation();">
+pymi
+</a>
+</td>
+<td>651</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">122</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 245}); event.stopPropagation();">
+Elgato
+</a>
+</td>
+<td>651</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">123</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 295}); event.stopPropagation();">
+BeforeDark
+</a>
+</td>
+<td>651</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">124</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 52}); event.stopPropagation();">
+0nePadding
+</a>
+</td>
+<td>651</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">125</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 559}); event.stopPropagation();">
+Nol3ptr
+</a>
+</td>
+<td>651</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">126</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 663}); event.stopPropagation();">
+k4mp3t
+</a>
+</td>
+<td>628</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">127</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 188}); event.stopPropagation();">
+Pixel Perfect
+</a>
+</td>
+<td>618</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">128</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 508}); event.stopPropagation();">
+pl4nt
+</a>
+</td>
+<td>618</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">129</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 142}); event.stopPropagation();">
+die_trying
+</a>
+</td>
+<td>613</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">130</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 318}); event.stopPropagation();">
+tinybaby
+</a>
+</td>
+<td>608</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">131</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 227}); event.stopPropagation();">
+Solid-E
+</a>
+</td>
+<td>601</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">132</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 662}); event.stopPropagation();">
+Valar Dohaeris
+</a>
+</td>
+<td>601</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">133</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 610}); event.stopPropagation();">
+pwnormus
+</a>
+</td>
+<td>601</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">134</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 511}); event.stopPropagation();">
+0rd3rs
+</a>
+</td>
+<td>601</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">135</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 684}); event.stopPropagation();">
+Cyber Security Enthusiast
+</a>
+</td>
+<td>601</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">136</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1130}); event.stopPropagation();">
+<span class="__cf_email__" data-cfemail="1f5d6d7a7e747671785d7e6c775f4b514b5a5c57">[email&#160;protected]</span>
+</a>
+</td>
+<td>601</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">137</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1260}); event.stopPropagation();">
+🚀
+</a>
+</td>
+<td>601</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">138</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 525}); event.stopPropagation();">
+S.O.A.P
+</a>
+</td>
+<td>601</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">139</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 271}); event.stopPropagation();">
+Black Cats and White Hats
+</a>
+</td>
+<td>601</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">140</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 648}); event.stopPropagation();">
+Unknown Cookies Hunters
+</a>
+</td>
+<td>601</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">141</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 530}); event.stopPropagation();">
+GammaSnake
+</a>
+</td>
+<td>599</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">142</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 750}); event.stopPropagation();">
+abaaba
+</a>
+</td>
+<td>589</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">143</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 320}); event.stopPropagation();">
+mocne tapsy
+</a>
+</td>
+<td>578</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">144</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1151}); event.stopPropagation();">
+bluehens
+</a>
+</td>
+<td>568</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">145</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 651}); event.stopPropagation();">
+itunderground
+</a>
+</td>
+<td>563</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">146</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 656}); event.stopPropagation();">
+IQ-toppene
+</a>
+</td>
+<td>551</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">147</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 231}); event.stopPropagation();">
+<span class="__cf_email__" data-cfemail="b6fef6d5ddeedf86db">[email&#160;protected]</span>
+</a>
+</td>
+<td>551</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">148</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 581}); event.stopPropagation();">
+Spanish Sauce Mafia
+</a>
+</td>
+<td>551</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">149</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1091}); event.stopPropagation();">
+ATLAS
+</a>
+</td>
+<td>551</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">150</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 44}); event.stopPropagation();">
+&lt;Br&gt;eaking Code 4.0
+</a>
+</td>
+<td>551</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">151</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 23}); event.stopPropagation();">
+teamberries
+</a>
+</td>
+<td>551</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">152</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 215}); event.stopPropagation();">
+ransoware
+</a>
+</td>
+<td>551</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">153</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 396}); event.stopPropagation();">
+My4nM4r
+</a>
+</td>
+<td>551</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">154</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 713}); event.stopPropagation();">
+solooo
+</a>
+</td>
+<td>551</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">155</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 167}); event.stopPropagation();">
+HITM3N
+</a>
+</td>
+<td>551</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">156</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 741}); event.stopPropagation();">
+Mayas
+</a>
+</td>
+<td>550</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">157</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 938}); event.stopPropagation();">
+IEEEFTW
+</a>
+</td>
+<td>550</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">158</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1019}); event.stopPropagation();">
+KITCTF
+</a>
+</td>
+<td>550</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">159</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 136}); event.stopPropagation();">
+xlr8or
+</a>
+</td>
+<td>540</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">160</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1171}); event.stopPropagation();">
+PSDLN
+</a>
+</td>
+<td>520</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">161</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 454}); event.stopPropagation();">
+Integer_0verfl0w
+</a>
+</td>
+<td>518</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">162</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 769}); event.stopPropagation();">
+ISITDTU
+</a>
+</td>
+<td>501</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">163</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1013}); event.stopPropagation();">
+TeeJay_0
+</a>
+</td>
+<td>501</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">164</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 446}); event.stopPropagation();">
+lab4
+</a>
+</td>
+<td>501</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">165</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 45}); event.stopPropagation();">
+sayonara
+</a>
+</td>
+<td>501</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">166</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 676}); event.stopPropagation();">
+havce
+</a>
+</td>
+<td>501</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">167</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 302}); event.stopPropagation();">
+PwnTheWhale
+</a>
+</td>
+<td>501</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">168</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 321}); event.stopPropagation();">
+DeadSec
+</a>
+</td>
+<td>501</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">169</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 322}); event.stopPropagation();">
+BITS-SOS
+</a>
+</td>
+<td>501</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">170</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 774}); event.stopPropagation();">
+Triple Triple
+</a>
+</td>
+<td>501</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">171</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 517}); event.stopPropagation();">
+skysoul1024
+</a>
+</td>
+<td>501</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">172</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 190}); event.stopPropagation();">
+c00k1e cptr
+</a>
+</td>
+<td>501</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">173</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 609}); event.stopPropagation();">
+USC CyCo
+</a>
+</td>
+<td>501</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">174</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 929}); event.stopPropagation();">
+Jutlandia
+</a>
+</td>
+<td>501</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">175</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 597}); event.stopPropagation();">
+CarpeDien
+</a>
+</td>
+<td>501</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">176</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 699}); event.stopPropagation();">
+l||l|llll||l|ll|
+</a>
+</td>
+<td>501</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">177</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 32}); event.stopPropagation();">
+sugar boys❤️
+</a>
+</td>
+<td>501</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">178</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 619}); event.stopPropagation();">
+Brunnerne
+</a>
+</td>
+<td>501</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">179</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 970}); event.stopPropagation();">
+Serval
+</a>
+</td>
+<td>501</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">180</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 915}); event.stopPropagation();">
+robot
+</a>
+</td>
+<td>500</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">181</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1136}); event.stopPropagation();">
+SonsOfBosses
+</a>
+</td>
+<td>500</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">182</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 657}); event.stopPropagation();">
+Rubi di Cubrik
+</a>
+</td>
+<td>500</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">183</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 834}); event.stopPropagation();">
+avrrop
+</a>
+</td>
+<td>477</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">184</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 579}); event.stopPropagation();">
+ilariodalmon
+</a>
+</td>
+<td>468</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">185</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 526}); event.stopPropagation();">
+C0ns0le
+</a>
+</td>
+<td>468</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">186</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 760}); event.stopPropagation();">
+TPC
+</a>
+</td>
+<td>463</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">187</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 144}); event.stopPropagation();">
+👀
+</a>
+</td>
+<td>451</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">188</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 647}); event.stopPropagation();">
+CSUF
+</a>
+</td>
+<td>451</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">189</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 701}); event.stopPropagation();">
+trying
+</a>
+</td>
+<td>451</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">190</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 658}); event.stopPropagation();">
+pastabase64
+</a>
+</td>
+<td>451</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">191</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 327}); event.stopPropagation();">
+curry
+</a>
+</td>
+<td>451</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">192</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 795}); event.stopPropagation();">
+byt3th3bull3t
+</a>
+</td>
+<td>451</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">193</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 189}); event.stopPropagation();">
+fulgur
+</a>
+</td>
+<td>451</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">194</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 634}); event.stopPropagation();">
+afterdark
+</a>
+</td>
+<td>451</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">195</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 416}); event.stopPropagation();">
+ESIROI
+</a>
+</td>
+<td>451</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">196</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 484}); event.stopPropagation();">
+Disqualified
+</a>
+</td>
+<td>451</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">197</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 768}); event.stopPropagation();">
+JWolves
+</a>
+</td>
+<td>451</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">198</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 146}); event.stopPropagation();">
+IUT_KryptoKnights
+</a>
+</td>
+<td>451</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">199</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 285}); event.stopPropagation();">
+BackMoon
+</a>
+</td>
+<td>451</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">200</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 650}); event.stopPropagation();">
+LMDS
+</a>
+</td>
+<td>451</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">201</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1125}); event.stopPropagation();">
+CBL
+</a>
+</td>
+<td>451</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">202</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 862}); event.stopPropagation();">
+WearyTravler
+</a>
+</td>
+<td>451</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">203</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 670}); event.stopPropagation();">
+Haalloo
+</a>
+</td>
+<td>450</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">204</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 593}); event.stopPropagation();">
+YellowFrogs
+</a>
+</td>
+<td>428</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">205</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1064}); event.stopPropagation();">
+c00c00
+</a>
+</td>
+<td>421</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">206</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 140}); event.stopPropagation();">
+LesStagiairesAuRepos
+</a>
+</td>
+<td>420</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">207</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 487}); event.stopPropagation();">
+SpotTheBug
+</a>
+</td>
+<td>420</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">208</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 417}); event.stopPropagation();">
+LSP
+</a>
+</td>
+<td>419</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">209</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 443}); event.stopPropagation();">
+m1t0
+</a>
+</td>
+<td>413</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">210</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 920}); event.stopPropagation();">
+Security Factorial
+</a>
+</td>
+<td>413</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">211</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 218}); event.stopPropagation();">
+perfect n00dl3s
+</a>
+</td>
+<td>401</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">212</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 654}); event.stopPropagation();">
+ISSGS
+</a>
+</td>
+<td>401</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">213</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 450}); event.stopPropagation();">
+KuA$aR-TM
+</a>
+</td>
+<td>401</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">214</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 347}); event.stopPropagation();">
+Nupakachi
+</a>
+</td>
+<td>401</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">215</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 462}); event.stopPropagation();">
+EDISEC
+</a>
+</td>
+<td>401</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">216</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 971}); event.stopPropagation();">
+The TB peeps
+</a>
+</td>
+<td>401</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">217</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1084}); event.stopPropagation();">
+afan
+</a>
+</td>
+<td>401</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">218</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 325}); event.stopPropagation();">
+XA21
+</a>
+</td>
+<td>401</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">219</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 519}); event.stopPropagation();">
+NEUQRO
+</a>
+</td>
+<td>401</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">220</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 182}); event.stopPropagation();">
+PL314D3S
+</a>
+</td>
+<td>401</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">221</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 105}); event.stopPropagation();">
+W3Bfederation
+</a>
+</td>
+<td>401</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">222</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 290}); event.stopPropagation();">
+TBTRA
+</a>
+</td>
+<td>401</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">223</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 47}); event.stopPropagation();">
+Drift2Win
+</a>
+</td>
+<td>401</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">224</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 409}); event.stopPropagation();">
+299
+</a>
+</td>
+<td>401</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">225</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 28}); event.stopPropagation();">
+W07v3R1n
+</a>
+</td>
+<td>401</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">226</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 176}); event.stopPropagation();">
+pwngenius
+</a>
+</td>
+<td>401</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">227</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 373}); event.stopPropagation();">
+FITSEC
+</a>
+</td>
+<td>401</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">228</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1075}); event.stopPropagation();">
+Dream_Duo XD
+</a>
+</td>
+<td>401</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">229</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 232}); event.stopPropagation();">
+BlueGhostChompers
+</a>
+</td>
+<td>401</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">230</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 332}); event.stopPropagation();">
+L3v3l 6
+</a>
+</td>
+<td>401</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">231</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 979}); event.stopPropagation();">
+Griffyns
+</a>
+</td>
+<td>401</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">232</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 588}); event.stopPropagation();">
+HackaAllt
+</a>
+</td>
+<td>401</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">233</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 914}); event.stopPropagation();">
+👻
+</a>
+</td>
+<td>401</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">234</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 57}); event.stopPropagation();">
+CyberFella
+</a>
+</td>
+<td>400</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">235</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 29}); event.stopPropagation();">
+EKS
+</a>
+</td>
+<td>400</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">236</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1246}); event.stopPropagation();">
+Hamers
+</a>
+</td>
+<td>400</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">237</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 488}); event.stopPropagation();">
+FlagMotori
+</a>
+</td>
+<td>400</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">238</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 646}); event.stopPropagation();">
+Neptunians
+</a>
+</td>
+<td>383</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">239</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 317}); event.stopPropagation();">
+N30Z30N
+</a>
+</td>
+<td>370</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">240</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 240}); event.stopPropagation();">
+Unicorn Team
+</a>
+</td>
+<td>369</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">241</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1144}); event.stopPropagation();">
+NND
+</a>
+</td>
+<td>367</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">242</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 277}); event.stopPropagation();">
+Wani Hackase
+</a>
+</td>
+<td>351</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">243</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 94}); event.stopPropagation();">
+Baboslar
+</a>
+</td>
+<td>351</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">244</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 821}); event.stopPropagation();">
+SaturnX
+</a>
+</td>
+<td>351</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">245</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 937}); event.stopPropagation();">
+_Ph03n1x_
+</a>
+</td>
+<td>351</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">246</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 235}); event.stopPropagation();">
+0xZ3R0
+</a>
+</td>
+<td>351</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">247</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 625}); event.stopPropagation();">
+G1tc_Gu4rdians
+</a>
+</td>
+<td>351</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">248</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1134}); event.stopPropagation();">
+Kawaii Raz0r Blades
+</a>
+</td>
+<td>351</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">249</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 172}); event.stopPropagation();">
+Emergency Bucket
+</a>
+</td>
+<td>351</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">250</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 710}); event.stopPropagation();">
+hackboro
+</a>
+</td>
+<td>351</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">251</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 86}); event.stopPropagation();">
+Skr1pt_K1dd13s
+</a>
+</td>
+<td>351</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">252</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 789}); event.stopPropagation();">
+s0ftpaws
+</a>
+</td>
+<td>351</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">253</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 380}); event.stopPropagation();">
+Capture the PAN
+</a>
+</td>
+<td>351</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">254</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 961}); event.stopPropagation();">
+Heaven&#39;s_Birds
+</a>
+</td>
+<td>351</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">255</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 491}); event.stopPropagation();">
+noraneco
+</a>
+</td>
+<td>351</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">256</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 71}); event.stopPropagation();">
+Hopper&#39;s Roppers
+</a>
+</td>
+<td>351</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">257</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 572}); event.stopPropagation();">
+thor
+</a>
+</td>
+<td>351</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">258</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 300}); event.stopPropagation();">
+M53
+</a>
+</td>
+<td>351</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">259</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1196}); event.stopPropagation();">
+NoobsLatam
+</a>
+</td>
+<td>351</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">260</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1021}); event.stopPropagation();">
+Learning Is Fun!
+</a>
+</td>
+<td>351</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">261</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 430}); event.stopPropagation();">
+theWik
+</a>
+</td>
+<td>351</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">262</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 87}); event.stopPropagation();">
+Ouagadougou
+</a>
+</td>
+<td>351</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">263</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 106}); event.stopPropagation();">
+AMBATASCRUM
+</a>
+</td>
+<td>351</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">264</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 688}); event.stopPropagation();">
+MysticalApple
+</a>
+</td>
+<td>351</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">265</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1040}); event.stopPropagation();">
+pecinta kalkulus
+</a>
+</td>
+<td>350</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">266</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1017}); event.stopPropagation();">
+Martial_Law_Enforcer
+</a>
+</td>
+<td>350</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">267</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 196}); event.stopPropagation();">
+qsrmvwrqxjusknt
+</a>
+</td>
+<td>350</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">268</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1254}); event.stopPropagation();">
+SPYBTF
+</a>
+</td>
+<td>350</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">269</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 813}); event.stopPropagation();">
+team4.5-X1
+</a>
+</td>
+<td>350</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">270</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1199}); event.stopPropagation();">
+THE
+</a>
+</td>
+<td>319</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">271</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 524}); event.stopPropagation();">
+SoloToxicPlayer
+</a>
+</td>
+<td>319</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">272</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 943}); event.stopPropagation();">
+siro53
+</a>
+</td>
+<td>319</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">273</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 104}); event.stopPropagation();">
+Balsn
+</a>
+</td>
+<td>319</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">274</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 884}); event.stopPropagation();">
+Hantu Siber
+</a>
+</td>
+<td>319</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">275</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 17}); event.stopPropagation();">
+PIII,N
+</a>
+</td>
+<td>317</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">276</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 495}); event.stopPropagation();">
+Flag 404
+</a>
+</td>
+<td>313</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">277</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1189}); event.stopPropagation();">
+Team Canada
+</a>
+</td>
+<td>313</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">278</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 739}); event.stopPropagation();">
+Cyber Peanuts
+</a>
+</td>
+<td>301</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">279</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 671}); event.stopPropagation();">
+SPACE
+</a>
+</td>
+<td>301</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">280</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 691}); event.stopPropagation();">
+FlagFishers
+</a>
+</td>
+<td>301</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">281</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 627}); event.stopPropagation();">
+dcryp7s
+</a>
+</td>
+<td>301</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">282</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 830}); event.stopPropagation();">
+heisenberg
+</a>
+</td>
+<td>301</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">283</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 995}); event.stopPropagation();">
+sshackers
+</a>
+</td>
+<td>301</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">284</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 400}); event.stopPropagation();">
+Crypt_Kiddies
+</a>
+</td>
+<td>301</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">285</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1066}); event.stopPropagation();">
+AAAAAAAAaa
+</a>
+</td>
+<td>301</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">286</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 422}); event.stopPropagation();">
+realTUSk
+</a>
+</td>
+<td>301</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">287</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 960}); event.stopPropagation();">
+garlicHamster
+</a>
+</td>
+<td>301</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">288</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 574}); event.stopPropagation();">
+Capture the coffee
+</a>
+</td>
+<td>301</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">289</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 729}); event.stopPropagation();">
+kok0mi
+</a>
+</td>
+<td>301</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">290</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1210}); event.stopPropagation();">
+ice-cream truck
+</a>
+</td>
+<td>301</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">291</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 59}); event.stopPropagation();">
+DeepSeaBusch
+</a>
+</td>
+<td>301</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">292</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 229}); event.stopPropagation();">
+Sebiji Ubi
+</a>
+</td>
+<td>301</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">293</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 173}); event.stopPropagation();">
+CRMA Cyber Club
+</a>
+</td>
+<td>301</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">294</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 472}); event.stopPropagation();">
+N1MDA
+</a>
+</td>
+<td>301</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">295</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1152}); event.stopPropagation();">
+OnlyFeet
+</a>
+</td>
+<td>301</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">296</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 269}); event.stopPropagation();">
+CSI-CSTJEAN
+</a>
+</td>
+<td>301</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">297</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 458}); event.stopPropagation();">
+KnightSec
+</a>
+</td>
+<td>301</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">298</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 313}); event.stopPropagation();">
+f34rl3ss
+</a>
+</td>
+<td>301</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">299</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 16}); event.stopPropagation();">
+Fweefwop
+</a>
+</td>
+<td>301</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">300</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 522}); event.stopPropagation();">
+huh
+</a>
+</td>
+<td>301</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">301</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 129}); event.stopPropagation();">
+p3qch
+</a>
+</td>
+<td>301</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">302</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1279}); event.stopPropagation();">
+Chromosome Overflow
+</a>
+</td>
+<td>301</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">303</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 742}); event.stopPropagation();">
+Fuzzy Goldfish
+</a>
+</td>
+<td>301</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">304</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 311}); event.stopPropagation();">
+d Flüügepilzli
+</a>
+</td>
+<td>301</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">305</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 123}); event.stopPropagation();">
+usurep
+</a>
+</td>
+<td>300</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">306</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 501}); event.stopPropagation();">
+GRIS
+</a>
+</td>
+<td>300</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">307</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1156}); event.stopPropagation();">
+loner_tearms
+</a>
+</td>
+<td>300</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">308</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1057}); event.stopPropagation();">
+3331
+</a>
+</td>
+<td>300</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">309</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1198}); event.stopPropagation();">
+TestTeamDoNotJoin
+</a>
+</td>
+<td>299</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">310</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 455}); event.stopPropagation();">
+IKUN
+</a>
+</td>
+<td>269</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">311</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 804}); event.stopPropagation();">
+W&amp;M
+</a>
+</td>
+<td>268</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">312</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 722}); event.stopPropagation();">
+CyberusGoesWoof
+</a>
+</td>
+<td>251</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">313</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 880}); event.stopPropagation();">
+XD XD XD XD XD XD XD
+</a>
+</td>
+<td>251</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">314</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 545}); event.stopPropagation();">
+Syclover
+</a>
+</td>
+<td>251</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">315</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 349}); event.stopPropagation();">
+hust3r
+</a>
+</td>
+<td>251</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">316</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 90}); event.stopPropagation();">
+JHDiscord
+</a>
+</td>
+<td>251</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">317</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 541}); event.stopPropagation();">
+SS
+</a>
+</td>
+<td>251</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">318</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 187}); event.stopPropagation();">
+Neurohax
+</a>
+</td>
+<td>251</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">319</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 341}); event.stopPropagation();">
+ácaros
+</a>
+</td>
+<td>251</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">320</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 696}); event.stopPropagation();">
+sp00k
+</a>
+</td>
+<td>251</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">321</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 975}); event.stopPropagation();">
+peepos
+</a>
+</td>
+<td>251</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">322</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 987}); event.stopPropagation();">
+TheFlash
+</a>
+</td>
+<td>251</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">323</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 418}); event.stopPropagation();">
+baby shark
+</a>
+</td>
+<td>251</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">324</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 567}); event.stopPropagation();">
+Tak terhingga
+</a>
+</td>
+<td>251</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">325</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 606}); event.stopPropagation();">
+red13ua
+</a>
+</td>
+<td>251</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">326</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 386}); event.stopPropagation();">
+QU4TRO QUANTUM
+</a>
+</td>
+<td>251</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">327</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1029}); event.stopPropagation();">
+Team Will
+</a>
+</td>
+<td>251</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">328</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 638}); event.stopPropagation();">
+Cyberthreat
+</a>
+</td>
+<td>251</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">329</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1208}); event.stopPropagation();">
+drdoctor
+</a>
+</td>
+<td>251</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">330</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 531}); event.stopPropagation();">
+Fish
+</a>
+</td>
+<td>251</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">331</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 856}); event.stopPropagation();">
+soltika
+</a>
+</td>
+<td>251</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">332</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 255}); event.stopPropagation();">
+W team
+</a>
+</td>
+<td>251</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">333</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 745}); event.stopPropagation();">
+Mod Mad Hackers
+</a>
+</td>
+<td>251</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">334</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 31}); event.stopPropagation();">
+Penyelam Handal
+</a>
+</td>
+<td>251</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">335</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 252}); event.stopPropagation();">
+CISEG0523
+</a>
+</td>
+<td>251</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">336</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1172}); event.stopPropagation();">
+bhackari
+</a>
+</td>
+<td>251</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">337</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 243}); event.stopPropagation();">
+ri5e
+</a>
+</td>
+<td>250</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">338</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 242}); event.stopPropagation();">
+Gekko Kok Ulti Temen
+</a>
+</td>
+<td>250</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">339</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 798}); event.stopPropagation();">
+gsitcia
+</a>
+</td>
+<td>250</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">340</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 948}); event.stopPropagation();">
+Alberto
+</a>
+</td>
+<td>250</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">341</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1164}); event.stopPropagation();">
+Odion
+</a>
+</td>
+<td>250</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">342</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1194}); event.stopPropagation();">
+Lone Wolf
+</a>
+</td>
+<td>250</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">343</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 124}); event.stopPropagation();">
+pwnpeko
+</a>
+</td>
+<td>250</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">344</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 731}); event.stopPropagation();">
+RecruitMe
+</a>
+</td>
+<td>250</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">345</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1252}); event.stopPropagation();">
+NaN
+</a>
+</td>
+<td>250</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">346</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 917}); event.stopPropagation();">
+t4fvra
+</a>
+</td>
+<td>250</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">347</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 956}); event.stopPropagation();">
+Team Groot
+</a>
+</td>
+<td>249</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">348</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1012}); event.stopPropagation();">
+zwhubuntu
+</a>
+</td>
+<td>219</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">349</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 852}); event.stopPropagation();">
+/bad
+</a>
+</td>
+<td>218</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">350</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 797}); event.stopPropagation();">
+ancd
+</a>
+</td>
+<td>218</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">351</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 342}); event.stopPropagation();">
+Redbud
+</a>
+</td>
+<td>213</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">352</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1294}); event.stopPropagation();">
+kupacup
+</a>
+</td>
+<td>212</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">353</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 120}); event.stopPropagation();">
+B. United
+</a>
+</td>
+<td>201</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">354</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 811}); event.stopPropagation();">
+BLASTB14
+</a>
+</td>
+<td>201</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">355</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 850}); event.stopPropagation();">
+HackBackAttack
+</a>
+</td>
+<td>201</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">356</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 819}); event.stopPropagation();">
+S4t4n_arm0r
+</a>
+</td>
+<td>201</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">357</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 439}); event.stopPropagation();">
+R1ck&amp;J03dy
+</a>
+</td>
+<td>201</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">358</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 339}); event.stopPropagation();">
+Ghostman
+</a>
+</td>
+<td>201</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">359</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 989}); event.stopPropagation();">
+g00fy_ahh
+</a>
+</td>
+<td>201</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">360</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 310}); event.stopPropagation();">
+RPB-FALCONZ
+</a>
+</td>
+<td>201</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">361</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 907}); event.stopPropagation();">
+s0lv3r
+</a>
+</td>
+<td>201</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">362</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 509}); event.stopPropagation();">
+ilulila
+</a>
+</td>
+<td>201</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">363</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1068}); event.stopPropagation();">
+Zeldog
+</a>
+</td>
+<td>201</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">364</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 238}); event.stopPropagation();">
+silly_lilly
+</a>
+</td>
+<td>201</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">365</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 404}); event.stopPropagation();">
+FITSEC2
+</a>
+</td>
+<td>201</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">366</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 974}); event.stopPropagation();">
+Nero-Hero
+</a>
+</td>
+<td>201</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">367</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 406}); event.stopPropagation();">
+aliu
+</a>
+</td>
+<td>201</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">368</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1193}); event.stopPropagation();">
+lunar
+</a>
+</td>
+<td>201</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">369</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1207}); event.stopPropagation();">
+pwner
+</a>
+</td>
+<td>201</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">370</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 127}); event.stopPropagation();">
+CeSeNA_sec
+</a>
+</td>
+<td>201</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">371</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 810}); event.stopPropagation();">
+Pixels
+</a>
+</td>
+<td>201</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">372</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1034}); event.stopPropagation();">
+The Few Chosen
+</a>
+</td>
+<td>201</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">373</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 226}); event.stopPropagation();">
+TFS
+</a>
+</td>
+<td>201</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">374</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 150}); event.stopPropagation();">
+freelance buddies
+</a>
+</td>
+<td>201</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">375</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 919}); event.stopPropagation();">
+Huntik
+</a>
+</td>
+<td>201</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">376</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 732}); event.stopPropagation();">
+Ginkgo
+</a>
+</td>
+<td>201</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">377</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1062}); event.stopPropagation();">
+Sup3rNapst3r
+</a>
+</td>
+<td>201</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">378</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 237}); event.stopPropagation();">
+BrainGL!tCH
+</a>
+</td>
+<td>201</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">379</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 397}); event.stopPropagation();">
+bigV
+</a>
+</td>
+<td>201</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">380</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 955}); event.stopPropagation();">
+Zurna
+</a>
+</td>
+<td>201</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">381</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 840}); event.stopPropagation();">
+Pwn17
+</a>
+</td>
+<td>201</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">382</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1263}); event.stopPropagation();">
+hervems
+</a>
+</td>
+<td>201</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">383</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 686}); event.stopPropagation();">
+DN-dn
+</a>
+</td>
+<td>200</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">384</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 445}); event.stopPropagation();">
+E4tS0d1um
+</a>
+</td>
+<td>200</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">385</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 954}); event.stopPropagation();">
+idogold
+</a>
+</td>
+<td>200</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">386</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 730}); event.stopPropagation();">
+4n6kw33n
+</a>
+</td>
+<td>200</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">387</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 529}); event.stopPropagation();">
+AN1S
+</a>
+</td>
+<td>200</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">388</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 546}); event.stopPropagation();">
+k3k1n
+</a>
+</td>
+<td>200</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">389</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1139}); event.stopPropagation();">
+badsctr
+</a>
+</td>
+<td>200</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">390</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1200}); event.stopPropagation();">
+YEAHHH
+</a>
+</td>
+<td>200</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">391</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1231}); event.stopPropagation();">
+Disboard
+</a>
+</td>
+<td>200</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">392</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1212}); event.stopPropagation();">
+manman
+</a>
+</td>
+<td>200</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">393</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1000}); event.stopPropagation();">
+pn-sec
+</a>
+</td>
+<td>200</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">394</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 195}); event.stopPropagation();">
+Barsides
+</a>
+</td>
+<td>200</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">395</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 133}); event.stopPropagation();">
+The villagers
+</a>
+</td>
+<td>200</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">396</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1308}); event.stopPropagation();">
+GIG
+</a>
+</td>
+<td>199</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">397</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 675}); event.stopPropagation();">
+Winty
+</a>
+</td>
+<td>151</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">398</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 228}); event.stopPropagation();">
+yamaha selalu didepan
+</a>
+</td>
+<td>151</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">399</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 521}); event.stopPropagation();">
+FireTeam
+</a>
+</td>
+<td>151</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">400</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 102}); event.stopPropagation();">
+Protektive
+</a>
+</td>
+<td>151</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">401</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 92}); event.stopPropagation();">
+White-tailed Deer
+</a>
+</td>
+<td>151</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">402</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 712}); event.stopPropagation();">
+tleuwu
+</a>
+</td>
+<td>151</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">403</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 515}); event.stopPropagation();">
+shadow aperture
+</a>
+</td>
+<td>151</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">404</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 687}); event.stopPropagation();">
+<span class="__cf_email__" data-cfemail="b8fbc1daddcaf8edfbf5">[email&#160;protected]</span>
+</a>
+</td>
+<td>151</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">405</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 608}); event.stopPropagation();">
+Spycio.Kon-Team
+</a>
+</td>
+<td>151</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">406</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 154}); event.stopPropagation();">
+Skate
+</a>
+</td>
+<td>151</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">407</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 815}); event.stopPropagation();">
+Maj&#39;dul Malware Club
+</a>
+</td>
+<td>151</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">408</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 500}); event.stopPropagation();">
+n006_54uaD
+</a>
+</td>
+<td>151</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">409</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 849}); event.stopPropagation();">
+beds
+</a>
+</td>
+<td>151</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">410</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 825}); event.stopPropagation();">
+不靠实力靠运气
+</a>
+</td>
+<td>151</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">411</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 550}); event.stopPropagation();">
+Sloth
+</a>
+</td>
+<td>151</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">412</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 563}); event.stopPropagation();">
+whois
+</a>
+</td>
+<td>151</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">413</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 781}); event.stopPropagation();">
+honmono
+</a>
+</td>
+<td>151</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">414</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 842}); event.stopPropagation();">
+TImiRUrYSECu
+</a>
+</td>
+<td>151</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">415</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 338}); event.stopPropagation();">
+Sk4r
+</a>
+</td>
+<td>151</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">416</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 514}); event.stopPropagation();">
+algo-breaker
+</a>
+</td>
+<td>151</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">417</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 968}); event.stopPropagation();">
+h3x3
+</a>
+</td>
+<td>151</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">418</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 978}); event.stopPropagation();">
+Cool team
+</a>
+</td>
+<td>151</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">419</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 614}); event.stopPropagation();">
+WaletSec
+</a>
+</td>
+<td>151</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">420</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 428}); event.stopPropagation();">
+Riemann Func
+</a>
+</td>
+<td>151</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">421</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 594}); event.stopPropagation();">
+Animesh89
+</a>
+</td>
+<td>151</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">422</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 939}); event.stopPropagation();">
+M0tH3r5h1P
+</a>
+</td>
+<td>151</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">423</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 569}); event.stopPropagation();">
+Amsterdam University of Applied Code Breakers
+</a>
+</td>
+<td>151</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">424</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 922}); event.stopPropagation();">
+Ov3rH4ck
+</a>
+</td>
+<td>151</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">425</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 690}); event.stopPropagation();">
+B1tWise
+</a>
+</td>
+<td>151</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">426</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 434}); event.stopPropagation();">
+StickyHackersFromGoogleCTF
+</a>
+</td>
+<td>151</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">427</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1159}); event.stopPropagation();">
+no_consensus
+</a>
+</td>
+<td>151</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">428</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1155}); event.stopPropagation();">
+Infiltra
+</a>
+</td>
+<td>151</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">429</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 494}); event.stopPropagation();">
+M0ud4
+</a>
+</td>
+<td>151</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">430</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 682}); event.stopPropagation();">
+csiescom
+</a>
+</td>
+<td>151</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">431</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 108}); event.stopPropagation();">
+gwappy
+</a>
+</td>
+<td>151</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">432</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1143}); event.stopPropagation();">
+cyber_blitz
+</a>
+</td>
+<td>151</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">433</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1154}); event.stopPropagation();">
+AUCC
+</a>
+</td>
+<td>151</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">434</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1229}); event.stopPropagation();">
+Solo-Run
+</a>
+</td>
+<td>151</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">435</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1124}); event.stopPropagation();">
+Sigee&#39;s team
+</a>
+</td>
+<td>151</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">436</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 851}); event.stopPropagation();">
+viol1t
+</a>
+</td>
+<td>151</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">437</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1099}); event.stopPropagation();">
+mesmeric
+</a>
+</td>
+<td>151</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">438</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 867}); event.stopPropagation();">
+johnbob
+</a>
+</td>
+<td>151</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">439</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 118}); event.stopPropagation();">
+Cyberox
+</a>
+</td>
+<td>151</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">440</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 872}); event.stopPropagation();">
+sbstm
+</a>
+</td>
+<td>151</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">441</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 586}); event.stopPropagation();">
+opal_forensics
+</a>
+</td>
+<td>151</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">442</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 950}); event.stopPropagation();">
+WannaLrn
+</a>
+</td>
+<td>151</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">443</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 746}); event.stopPropagation();">
+nazgul
+</a>
+</td>
+<td>150</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">444</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 348}); event.stopPropagation();">
+a.K.a.C.S.u.C.i
+</a>
+</td>
+<td>150</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">445</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 838}); event.stopPropagation();">
+ClaireForever
+</a>
+</td>
+<td>150</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">446</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 790}); event.stopPropagation();">
+meow
+</a>
+</td>
+<td>150</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">447</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 169}); event.stopPropagation();">
+黎明破晓曙光晨曦
+</a>
+</td>
+<td>150</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">448</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 921}); event.stopPropagation();">
+sttrv
+</a>
+</td>
+<td>150</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">449</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1006}); event.stopPropagation();">
+215gang213
+</a>
+</td>
+<td>150</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">450</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1030}); event.stopPropagation();">
+DaBaddest
+</a>
+</td>
+<td>150</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">451</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 930}); event.stopPropagation();">
+ramuu
+</a>
+</td>
+<td>150</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">452</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 566}); event.stopPropagation();">
+DamianPowers
+</a>
+</td>
+<td>150</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">453</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 261}); event.stopPropagation();">
+Strike Team Thunder-Kill Alpha: Hard Target
+</a>
+</td>
+<td>150</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">454</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 604}); event.stopPropagation();">
+n0Flags
+</a>
+</td>
+<td>150</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">455</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1109}); event.stopPropagation();">
+Gray Chameleons
+</a>
+</td>
+<td>150</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">456</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1102}); event.stopPropagation();">
+im_dragon
+</a>
+</td>
+<td>150</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">457</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 164}); event.stopPropagation();">
+Los Chads
+</a>
+</td>
+<td>150</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">458</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 480}); event.stopPropagation();">
+NorthWest
+</a>
+</td>
+<td>150</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">459</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 977}); event.stopPropagation();">
+Lonely Swan
+</a>
+</td>
+<td>150</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">460</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 928}); event.stopPropagation();">
+3bp-r3t
+</a>
+</td>
+<td>150</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">461</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 863}); event.stopPropagation();">
+13:49
+</a>
+</td>
+<td>150</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">462</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 56}); event.stopPropagation();">
+TCTN
+</a>
+</td>
+<td>150</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">463</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1243}); event.stopPropagation();">
+S4K1
+</a>
+</td>
+<td>150</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">464</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1129}); event.stopPropagation();">
+Cooper
+</a>
+</td>
+<td>150</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">465</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1089}); event.stopPropagation();">
+Gaming!
+</a>
+</td>
+<td>150</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">466</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1322}); event.stopPropagation();">
+ee
+</a>
+</td>
+<td>150</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">467</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 69}); event.stopPropagation();">
+TeamBlue
+</a>
+</td>
+<td>150</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">468</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1255}); event.stopPropagation();">
+pjwhn
+</a>
+</td>
+<td>127</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">469</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 736}); event.stopPropagation();">
+Unlimited
+</a>
+</td>
+<td>112</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">470</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 733}); event.stopPropagation();">
+in_the_w3ll
+</a>
+</td>
+<td>101</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">471</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 170}); event.stopPropagation();">
+i_try_send_help
+</a>
+</td>
+<td>101</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">472</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 268}); event.stopPropagation();">
+CtrlAltDefeaters
+</a>
+</td>
+<td>101</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">473</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 355}); event.stopPropagation();">
+CTF Newbies
+</a>
+</td>
+<td>101</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">474</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 631}); event.stopPropagation();">
+CyberClueless
+</a>
+</td>
+<td>101</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">475</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 775}); event.stopPropagation();">
+Bruh
+</a>
+</td>
+<td>101</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">476</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 286}); event.stopPropagation();">
+VN2667
+</a>
+</td>
+<td>101</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">477</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 643}); event.stopPropagation();">
+EinNiemand
+</a>
+</td>
+<td>101</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">478</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 860}); event.stopPropagation();">
+Braincrackers
+</a>
+</td>
+<td>101</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">479</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 590}); event.stopPropagation();">
+Nepaletka
+</a>
+</td>
+<td>101</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">480</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 910}); event.stopPropagation();">
+kn1gh7
+</a>
+</td>
+<td>101</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">481</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 962}); event.stopPropagation();">
+dq
+</a>
+</td>
+<td>101</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">482</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 585}); event.stopPropagation();">
+AI_IS_THE_ANSWER
+</a>
+</td>
+<td>101</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">483</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 376}); event.stopPropagation();">
+allFun
+</a>
+</td>
+<td>101</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">484</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 695}); event.stopPropagation();">
+Cool...Hacks!
+</a>
+</td>
+<td>101</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">485</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 624}); event.stopPropagation();">
+88 Ronin
+</a>
+</td>
+<td>101</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">486</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 257}); event.stopPropagation();">
+Password123
+</a>
+</td>
+<td>101</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">487</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 378}); event.stopPropagation();">
+Kkhan Limited
+</a>
+</td>
+<td>101</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">488</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 251}); event.stopPropagation();">
+whyS0serious
+</a>
+</td>
+<td>101</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">489</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 678}); event.stopPropagation();">
+superbeginner
+</a>
+</td>
+<td>101</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">490</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 385}); event.stopPropagation();">
+AMN3S1A~
+</a>
+</td>
+<td>101</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">491</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1107}); event.stopPropagation();">
+inno_vladislav_spigin
+</a>
+</td>
+<td>101</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">492</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 383}); event.stopPropagation();">
+Cool Cyber
+</a>
+</td>
+<td>101</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">493</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 371}); event.stopPropagation();">
+I don&#39;t know how to name this
+</a>
+</td>
+<td>101</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">494</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 707}); event.stopPropagation();">
+SmoothHacker
+</a>
+</td>
+<td>101</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">495</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 623}); event.stopPropagation();">
+weusearchbtw
+</a>
+</td>
+<td>101</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">496</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 134}); event.stopPropagation();">
+ACHUX
+</a>
+</td>
+<td>101</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">497</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 390}); event.stopPropagation();">
+wgpsec
+</a>
+</td>
+<td>101</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">498</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 208}); event.stopPropagation();">
+W4t3r
+</a>
+</td>
+<td>101</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">499</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 65}); event.stopPropagation();">
+NoobzSquad
+</a>
+</td>
+<td>101</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">500</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 490}); event.stopPropagation();">
+JumpingCats4000
+</a>
+</td>
+<td>101</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">501</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 791}); event.stopPropagation();">
+hackyou
+</a>
+</td>
+<td>101</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">502</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 203}); event.stopPropagation();">
+DC7
+</a>
+</td>
+<td>101</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">503</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1241}); event.stopPropagation();">
+kapsec
+</a>
+</td>
+<td>101</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">504</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1259}); event.stopPropagation();">
+suriryuk
+</a>
+</td>
+<td>101</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">505</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 674}); event.stopPropagation();">
+D4ck3n
+</a>
+</td>
+<td>101</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">506</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 175}); event.stopPropagation();">
+alicel
+</a>
+</td>
+<td>101</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">507</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 354}); event.stopPropagation();">
+noName
+</a>
+</td>
+<td>101</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">508</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 266}); event.stopPropagation();">
+contagion
+</a>
+</td>
+<td>101</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">509</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1293}); event.stopPropagation();">
+LetUsCook
+</a>
+</td>
+<td>101</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">510</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1311}); event.stopPropagation();">
+E15TEAM
+</a>
+</td>
+<td>101</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">511</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1077}); event.stopPropagation();">
+Du&lt;k
+</a>
+</td>
+<td>101</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">512</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1316}); event.stopPropagation();">
+N00bz
+</a>
+</td>
+<td>101</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">513</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 719}); event.stopPropagation();">
+partyofone
+</a>
+</td>
+<td>100</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">514</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 743}); event.stopPropagation();">
+BranMan
+</a>
+</td>
+<td>100</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">515</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 726}); event.stopPropagation();">
+hi ravi
+</a>
+</td>
+<td>100</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">516</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 809}); event.stopPropagation();">
+l1nx1n
+</a>
+</td>
+<td>100</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">517</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 828}); event.stopPropagation();">
+cbothh
+</a>
+</td>
+<td>100</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">518</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 864}); event.stopPropagation();">
+ratgpt
+</a>
+</td>
+<td>100</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">519</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 578}); event.stopPropagation();">
+vicevirus
+</a>
+</td>
+<td>100</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">520</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 916}); event.stopPropagation();">
+漢堡包
+</a>
+</td>
+<td>100</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">521</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 906}); event.stopPropagation();">
+senyumsemangat
+</a>
+</td>
+<td>100</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">522</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 908}); event.stopPropagation();">
+Rezilion
+</a>
+</td>
+<td>100</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">523</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 945}); event.stopPropagation();">
+mikejam
+</a>
+</td>
+<td>100</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">524</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 304}); event.stopPropagation();">
+vyazniki
+</a>
+</td>
+<td>100</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">525</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 53}); event.stopPropagation();">
+Backstreet Hackers
+</a>
+</td>
+<td>100</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">526</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 952}); event.stopPropagation();">
+AgainJohnDoe
+</a>
+</td>
+<td>100</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">527</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1061}); event.stopPropagation();">
+ARKcy
+</a>
+</td>
+<td>100</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">528</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 523}); event.stopPropagation();">
+{0x}
+</a>
+</td>
+<td>100</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">529</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 951}); event.stopPropagation();">
+whoami
+</a>
+</td>
+<td>100</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">530</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 854}); event.stopPropagation();">
+uncl0ak
+</a>
+</td>
+<td>100</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">531</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 401}); event.stopPropagation();">
+1nf1n1ty
+</a>
+</td>
+<td>100</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">532</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1103}); event.stopPropagation();">
+Moonflower
+</a>
+</td>
+<td>100</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">533</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1150}); event.stopPropagation();">
+qqZrt
+</a>
+</td>
+<td>100</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">534</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 331}); event.stopPropagation();">
+fffffffffffffffffff
+</a>
+</td>
+<td>100</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">535</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 143}); event.stopPropagation();">
+free_funky_frogs
+</a>
+</td>
+<td>100</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">536</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1296}); event.stopPropagation();">
+SoloSoloSolo
+</a>
+</td>
+<td>100</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">537</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1300}); event.stopPropagation();">
+InfosecIITG
+</a>
+</td>
+<td>100</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">538</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1305}); event.stopPropagation();">
+colleirose
+</a>
+</td>
+<td>100</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">539</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1302}); event.stopPropagation();">
+YaningJedi
+</a>
+</td>
+<td>100</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">540</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1314}); event.stopPropagation();">
+ftek
+</a>
+</td>
+<td>100</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">541</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 10}); event.stopPropagation();">
+The Fighting Mongooses
+</a>
+</td>
+<td>100</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">542</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 752}); event.stopPropagation();">
+ether
+</a>
+</td>
+<td>100</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">543</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 369}); event.stopPropagation();">
+Los_Pollos_Hermanos
+</a>
+</td>
+<td>99</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">544</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1161}); event.stopPropagation();">
+SamTeam
+</a>
+</td>
+<td>99</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">545</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1240}); event.stopPropagation();">
+Among team
+</a>
+</td>
+<td>99</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">546</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 861}); event.stopPropagation();">
+__xor__
+</a>
+</td>
+<td>99</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">547</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 883}); event.stopPropagation();">
+0xego
+</a>
+</td>
+<td>99</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">548</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 892}); event.stopPropagation();">
+peko
+</a>
+</td>
+<td>69</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">549</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 902}); event.stopPropagation();">
+f1rs7_7im3
+</a>
+</td>
+<td>69</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">550</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 156}); event.stopPropagation();">
+AntiguaRecon
+</a>
+</td>
+<td>51</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">551</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 12}); event.stopPropagation();">
+Mr.SoloDolo
+</a>
+</td>
+<td>51</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">552</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 714}); event.stopPropagation();">
+Seasons
+</a>
+</td>
+<td>51</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">553</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 11}); event.stopPropagation();">
+🎵 me, myself &amp; i 🎵
+</a>
+</td>
+<td>51</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">554</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 666}); event.stopPropagation();">
+gergeerew
+</a>
+</td>
+<td>51</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">555</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 735}); event.stopPropagation();">
+kj20232023
+</a>
+</td>
+<td>51</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">556</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 411}); event.stopPropagation();">
+aninock
+</a>
+</td>
+<td>51</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">557</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 473}); event.stopPropagation();">
+k3v1n
+</a>
+</td>
+<td>51</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">558</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 794}); event.stopPropagation();">
+4lpha
+</a>
+</td>
+<td>51</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">559</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 792}); event.stopPropagation();">
+tbd
+</a>
+</td>
+<td>51</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">560</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 395}); event.stopPropagation();">
+The Nubbers
+</a>
+</td>
+<td>51</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">561</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 21}); event.stopPropagation();">
+so_low
+</a>
+</td>
+<td>51</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">562</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 470}); event.stopPropagation();">
+SOLO
+</a>
+</td>
+<td>51</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">563</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 832}); event.stopPropagation();">
+hihihihi
+</a>
+</td>
+<td>51</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">564</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 628}); event.stopPropagation();">
+Br0wn#
+</a>
+</td>
+<td>51</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">565</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 298}); event.stopPropagation();">
+Alexius
+</a>
+</td>
+<td>51</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">566</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 808}); event.stopPropagation();">
+octatherp
+</a>
+</td>
+<td>51</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">567</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 644}); event.stopPropagation();">
+Bugger
+</a>
+</td>
+<td>51</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">568</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 878}); event.stopPropagation();">
+Vaundy_best
+</a>
+</td>
+<td>51</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">569</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 879}); event.stopPropagation();">
+C4C
+</a>
+</td>
+<td>51</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">570</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 873}); event.stopPropagation();">
+werbinich
+</a>
+</td>
+<td>51</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">571</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 132}); event.stopPropagation();">
+individual_from_kknock
+</a>
+</td>
+<td>51</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">572</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 882}); event.stopPropagation();">
+carajillo
+</a>
+</td>
+<td>51</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">573</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 340}); event.stopPropagation();">
+SWING
+</a>
+</td>
+<td>51</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">574</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 312}); event.stopPropagation();">
+4ryu
+</a>
+</td>
+<td>51</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">575</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 761}); event.stopPropagation();">
+Horoscope
+</a>
+</td>
+<td>51</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">576</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 946}); event.stopPropagation();">
+ma5t3r
+</a>
+</td>
+<td>51</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">577</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 391}); event.stopPropagation();">
+AuQuangDuc
+</a>
+</td>
+<td>51</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">578</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 913}); event.stopPropagation();">
+Sawcon
+</a>
+</td>
+<td>51</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">579</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1004}); event.stopPropagation();">
+Ah Yalan Dunya
+</a>
+</td>
+<td>51</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">580</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 453}); event.stopPropagation();">
+ONsen
+</a>
+</td>
+<td>51</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">581</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 897}); event.stopPropagation();">
+qwertyhacker
+</a>
+</td>
+<td>51</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">582</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1010}); event.stopPropagation();">
+Cyberninja
+</a>
+</td>
+<td>51</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">583</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 607}); event.stopPropagation();">
+INVALID_TEAM
+</a>
+</td>
+<td>51</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">584</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1005}); event.stopPropagation();">
+R4V3NGU1N
+</a>
+</td>
+<td>51</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">585</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1058}); event.stopPropagation();">
+ebfe
+</a>
+</td>
+<td>51</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">586</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 527}); event.stopPropagation();">
+d1v1der
+</a>
+</td>
+<td>51</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">587</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 289}); event.stopPropagation();">
+aixy
+</a>
+</td>
+<td>51</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">588</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1079}); event.stopPropagation();">
+Setup
+</a>
+</td>
+<td>51</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">589</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 582}); event.stopPropagation();">
+RedSolo
+</a>
+</td>
+<td>51</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">590</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1105}); event.stopPropagation();">
+win32kdie
+</a>
+</td>
+<td>51</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">591</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 548}); event.stopPropagation();">
+MrW4r
+</a>
+</td>
+<td>51</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">592</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1093}); event.stopPropagation();">
+yokkoi1280
+</a>
+</td>
+<td>51</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">593</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1080}); event.stopPropagation();">
+We_0wn_Y0u
+</a>
+</td>
+<td>51</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">594</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1146}); event.stopPropagation();">
+大径村恶霸2
+</a>
+</td>
+<td>51</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">595</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 55}); event.stopPropagation();">
+GatoradeWipes
+</a>
+</td>
+<td>51</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">596</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1025}); event.stopPropagation();">
+Fat Earth
+</a>
+</td>
+<td>51</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">597</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1127}); event.stopPropagation();">
+Kakalolnjj
+</a>
+</td>
+<td>51</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">598</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 305}); event.stopPropagation();">
+Rookie
+</a>
+</td>
+<td>51</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">599</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 363}); event.stopPropagation();">
+Cyber Toxin
+</a>
+</td>
+<td>51</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">600</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1213}); event.stopPropagation();">
+qwerasdf
+</a>
+</td>
+<td>51</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">601</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 888}); event.stopPropagation();">
+aimnc22
+</a>
+</td>
+<td>51</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">602</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1086}); event.stopPropagation();">
+pwoofy and wefs
+</a>
+</td>
+<td>51</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">603</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 3}); event.stopPropagation();">
+maki
+</a>
+</td>
+<td>51</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">604</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1261}); event.stopPropagation();">
+Tacky
+</a>
+</td>
+<td>51</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">605</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1274}); event.stopPropagation();">
+CYB3R_T3N4CI0US
+</a>
+</td>
+<td>51</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">606</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1283}); event.stopPropagation();">
+JaiShreeRam
+</a>
+</td>
+<td>51</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">607</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 426}); event.stopPropagation();">
+stalk
+</a>
+</td>
+<td>51</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">608</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1297}); event.stopPropagation();">
+korn
+</a>
+</td>
+<td>51</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">609</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 587}); event.stopPropagation();">
+10
+</a>
+</td>
+<td>51</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">610</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1277}); event.stopPropagation();">
+ssg
+</a>
+</td>
+<td>51</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">611</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1253}); event.stopPropagation();">
+Devnull01
+</a>
+</td>
+<td>51</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">612</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1323}); event.stopPropagation();">
+BlackStars
+</a>
+</td>
+<td>51</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">613</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 668}); event.stopPropagation();">
+SussyBaka
+</a>
+</td>
+<td>50</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">614</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 346}); event.stopPropagation();">
+uuohc
+</a>
+</td>
+<td>50</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">615</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 720}); event.stopPropagation();">
+HorHorHacker
+</a>
+</td>
+<td>50</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">616</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 723}); event.stopPropagation();">
+ec
+</a>
+</td>
+<td>50</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">617</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 685}); event.stopPropagation();">
+16j
+</a>
+</td>
+<td>50</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">618</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 751}); event.stopPropagation();">
+loli
+</a>
+</td>
+<td>50</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">619</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 756}); event.stopPropagation();">
+kk
+</a>
+</td>
+<td>50</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">620</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 749}); event.stopPropagation();">
+Discovery
+</a>
+</td>
+<td>50</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">621</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 542}); event.stopPropagation();">
+good_cat
+</a>
+</td>
+<td>50</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">622</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 765}); event.stopPropagation();">
+1NS0MN144
+</a>
+</td>
+<td>50</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">623</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 748}); event.stopPropagation();">
+cnm
+</a>
+</td>
+<td>50</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">624</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 784}); event.stopPropagation();">
+coolteamname
+</a>
+</td>
+<td>50</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">625</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 780}); event.stopPropagation();">
+asdfkjldfjlk
+</a>
+</td>
+<td>50</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">626</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 382}); event.stopPropagation();">
+DMWater
+</a>
+</td>
+<td>50</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">627</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 835}); event.stopPropagation();">
+AMA
+</a>
+</td>
+<td>50</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">628</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 424}); event.stopPropagation();">
+CRUSADERS
+</a>
+</td>
+<td>50</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">629</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 837}); event.stopPropagation();">
+evcc
+</a>
+</td>
+<td>50</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">630</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 822}); event.stopPropagation();">
+solar wind
+</a>
+</td>
+<td>50</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">631</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 192}); event.stopPropagation();">
+sukakuki
+</a>
+</td>
+<td>50</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">632</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 505}); event.stopPropagation();">
+intelligence_cloud9
+</a>
+</td>
+<td>50</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">633</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 900}); event.stopPropagation();">
+<span class="__cf_email__" data-cfemail="b8decad9dbdbd0ddccccd78981818df8dfd5d9d1d496dbd7d5">[email&#160;protected]</span>
+</a>
+</td>
+<td>50</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">634</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 899}); event.stopPropagation();">
+<span class="__cf_email__" data-cfemail="4829242e217071712b3c2e082f25292124662b2725">[email&#160;protected]</span>
+</a>
+</td>
+<td>50</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">635</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 333}); event.stopPropagation();">
+smack.dat
+</a>
+</td>
+<td>50</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">636</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 660}); event.stopPropagation();">
+REVillains
+</a>
+</td>
+<td>50</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">637</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 976}); event.stopPropagation();">
+n0t_Z3rO
+</a>
+</td>
+<td>50</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">638</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 573}); event.stopPropagation();">
+F055il215
+</a>
+</td>
+<td>50</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">639</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 941}); event.stopPropagation();">
+aaaaaaaa
+</a>
+</td>
+<td>50</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">640</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 927}); event.stopPropagation();">
+Abysslab
+</a>
+</td>
+<td>50</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">641</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 982}); event.stopPropagation();">
+PsychedelicRed
+</a>
+</td>
+<td>50</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">642</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 996}); event.stopPropagation();">
+The Pandavas
+</a>
+</td>
+<td>50</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">643</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 616}); event.stopPropagation();">
+Soloteam
+</a>
+</td>
+<td>50</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">644</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 953}); event.stopPropagation();">
+fhackyou
+</a>
+</td>
+<td>50</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">645</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 932}); event.stopPropagation();">
+lol123
+</a>
+</td>
+<td>50</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">646</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1048}); event.stopPropagation();">
+kangwijen
+</a>
+</td>
+<td>50</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">647</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1044}); event.stopPropagation();">
+ThePlayer372
+</a>
+</td>
+<td>50</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">648</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1032}); event.stopPropagation();">
+H4CK1NG H3LP
+</a>
+</td>
+<td>50</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">649</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1023}); event.stopPropagation();">
+guck_the_foo
+</a>
+</td>
+<td>50</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">650</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 537}); event.stopPropagation();">
+cicero
+</a>
+</td>
+<td>50</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">651</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 7}); event.stopPropagation();">
+n0313s
+</a>
+</td>
+<td>50</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">652</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 100}); event.stopPropagation();">
+BabyChicken
+</a>
+</td>
+<td>50</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">653</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1078}); event.stopPropagation();">
+DELTAxSYNDICATE
+</a>
+</td>
+<td>50</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">654</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1054}); event.stopPropagation();">
+Laespada
+</a>
+</td>
+<td>50</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">655</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 26}); event.stopPropagation();">
+Cukc4keC0d1ng
+</a>
+</td>
+<td>50</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">656</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 365}); event.stopPropagation();">
+L&#39;Ekip
+</a>
+</td>
+<td>50</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">657</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1098}); event.stopPropagation();">
+GoblinGang
+</a>
+</td>
+<td>50</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">658</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1101}); event.stopPropagation();">
+QwQ
+</a>
+</td>
+<td>50</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">659</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 414}); event.stopPropagation();">
+BeyondRCE
+</a>
+</td>
+<td>50</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">660</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 468}); event.stopPropagation();">
+Starburst Kiwawa
+</a>
+</td>
+<td>50</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">661</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1133}); event.stopPropagation();">
+Impwning
+</a>
+</td>
+<td>50</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">662</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 992}); event.stopPropagation();">
+l0s3r
+</a>
+</td>
+<td>50</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">663</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1180}); event.stopPropagation();">
+ceva
+</a>
+</td>
+<td>50</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">664</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 482}); event.stopPropagation();">
+RedHotChiliVictim
+</a>
+</td>
+<td>50</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">665</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1195}); event.stopPropagation();">
+ice
+</a>
+</td>
+<td>50</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">666</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1192}); event.stopPropagation();">
+BLABLA
+</a>
+</td>
+<td>50</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">667</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1197}); event.stopPropagation();">
+jteerice
+</a>
+</td>
+<td>50</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">668</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1067}); event.stopPropagation();">
+XingHeRuMeng
+</a>
+</td>
+<td>50</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">669</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 803}); event.stopPropagation();">
+a_noob_hacker
+</a>
+</td>
+<td>50</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">670</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1209}); event.stopPropagation();">
+silent cries
+</a>
+</td>
+<td>50</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">671</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1011}); event.stopPropagation();">
+jydzd
+</a>
+</td>
+<td>50</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">672</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1211}); event.stopPropagation();">
+xd
+</a>
+</td>
+<td>50</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">673</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1227}); event.stopPropagation();">
+hermoine
+</a>
+</td>
+<td>50</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">674</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1233}); event.stopPropagation();">
+V3RBAL
+</a>
+</td>
+<td>50</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">675</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 19}); event.stopPropagation();">
+ju57_8361nn3r5
+</a>
+</td>
+<td>50</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">676</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1177}); event.stopPropagation();">
+heckers
+</a>
+</td>
+<td>50</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">677</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 506}); event.stopPropagation();">
+flag_koi
+</a>
+</td>
+<td>50</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">678</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1251}); event.stopPropagation();">
+0x221b
+</a>
+</td>
+<td>50</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">679</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 492}); event.stopPropagation();">
+NAVER Cloud
+</a>
+</td>
+<td>50</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">680</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 744}); event.stopPropagation();">
+{{01}}
+</a>
+</td>
+<td>50</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">681</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1267}); event.stopPropagation();">
+stdnoerr
+</a>
+</td>
+<td>50</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">682</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 294}); event.stopPropagation();">
+Ch33mz_4l0n3
+</a>
+</td>
+<td>50</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">683</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 119}); event.stopPropagation();">
+fzhshzh
+</a>
+</td>
+<td>50</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">684</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1278}); event.stopPropagation();">
+loner
+</a>
+</td>
+<td>50</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">685</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 493}); event.stopPropagation();">
+anakta
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">686</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 163}); event.stopPropagation();">
+Bababooey Hacks
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">687</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 599}); event.stopPropagation();">
+5h4d0wbr0k3r5
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">688</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 702}); event.stopPropagation();">
+austin&#39;s team
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">689</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 693}); event.stopPropagation();">
+Renton_k
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">690</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 703}); event.stopPropagation();">
+n00b
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">691</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 153}); event.stopPropagation();">
+ByteMe
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">692</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 700}); event.stopPropagation();">
+McPayload
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">693</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 661}); event.stopPropagation();">
+char team
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">694</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 645}); event.stopPropagation();">
+PR3D3C70R$
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">695</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 725}); event.stopPropagation();">
+0jae0
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">696</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 728}); event.stopPropagation();">
+WHATEVER &gt;~&lt;
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">697</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 2}); event.stopPropagation();">
+xor
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">698</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 555}); event.stopPropagation();">
+zzsla
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">699</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 8}); event.stopPropagation();">
+NYUSEC
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">700</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 157}); event.stopPropagation();">
+SYNful ACKtivists
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">701</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 740}); event.stopPropagation();">
+Siber TKJ Masbro
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">702</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 451}); event.stopPropagation();">
+PracticeTeam
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">703</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 498}); event.stopPropagation();">
+angdada520
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">704</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 757}); event.stopPropagation();">
+hwed
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">705</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 444}); event.stopPropagation();">
+bobs
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">706</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 561}); event.stopPropagation();">
+DarkOps
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">707</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 766}); event.stopPropagation();">
+herta enjoyer
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">708</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 773}); event.stopPropagation();">
+vanatka
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">709</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 770}); event.stopPropagation();">
+Dr4g0n_5l4y3R
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">710</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 776}); event.stopPropagation();">
+n0n
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">711</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 554}); event.stopPropagation();">
+test
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">712</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 178}); event.stopPropagation();">
+retr0
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">713</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 786}); event.stopPropagation();">
+moonheesung
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">714</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 413}); event.stopPropagation();">
+hashers
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">715</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 503}); event.stopPropagation();">
+my team
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">716</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 802}); event.stopPropagation();">
+Echo
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">717</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 534}); event.stopPropagation();">
+NemoNemo
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">718</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 177}); event.stopPropagation();">
+tazac
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">719</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 33}); event.stopPropagation();">
+CyberB@<span class="__cf_email__" data-cfemail="d5f181958791">[email&#160;protected]</span>
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">720</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 6}); event.stopPropagation();">
+chandrapushpa
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">721</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 297}); event.stopPropagation();">
+op
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">722</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 612}); event.stopPropagation();">
+rabbit_hole
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">723</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 848}); event.stopPropagation();">
+not a good team
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">724</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 855}); event.stopPropagation();">
+newhackers
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">725</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 78}); event.stopPropagation();">
+Underflow
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">726</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 259}); event.stopPropagation();">
+Parkour
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">727</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 866}); event.stopPropagation();">
+0x1ce
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">728</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 551}); event.stopPropagation();">
+al00f
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">729</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 431}); event.stopPropagation();">
+poteto
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">730</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 876}); event.stopPropagation();">
+NetCloak
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">731</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 881}); event.stopPropagation();">
+Qingwan
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">732</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 886}); event.stopPropagation();">
+Esho Potaka Dhori
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">733</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 890}); event.stopPropagation();">
+Citrus Cyber
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">734</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 405}); event.stopPropagation();">
+pringles
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">735</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 891}); event.stopPropagation();">
+Lazy ppl
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">736</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 423}); event.stopPropagation();">
+<span class="__cf_email__" data-cfemail="93e4fbfae7f6fbf2e7fbf2f0f8f6e1aba2aba2d3f4fef2faffbdf0fcfe">[email&#160;protected]</span>
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">737</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 893}); event.stopPropagation();">
+shiroyagi4777
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">738</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 787}); event.stopPropagation();">
+Cla55N0tF0und
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">739</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 353}); event.stopPropagation();">
+F17Flo0r
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">740</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 901}); event.stopPropagation();">
+b3liau1ni
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">741</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 288}); event.stopPropagation();">
+kftg
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">742</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 437}); event.stopPropagation();">
+secware
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">743</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 441}); event.stopPropagation();">
+T1-1E_130ys
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">744</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 540}); event.stopPropagation();">
+MayThangChuaKhon
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">745</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 547}); event.stopPropagation();">
+sqlkinkjection
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">746</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 923}); event.stopPropagation();">
+nopbi
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">747</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 949}); event.stopPropagation();">
+LetzPwn
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">748</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 83}); event.stopPropagation();">
+Pejuang Solo
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">749</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 983}); event.stopPropagation();">
+DipanNama
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">750</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 990}); event.stopPropagation();">
+Moeses
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">751</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 985}); event.stopPropagation();">
+m0wn1ka
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">752</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 991}); event.stopPropagation();">
+Usha
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">753</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 994}); event.stopPropagation();">
+Sankalpa_is_here
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">754</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 998}); event.stopPropagation();">
+BITSkrieg
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">755</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 475}); event.stopPropagation();">
+BoldEagle
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">756</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 912}); event.stopPropagation();">
+Bu113r5_SU
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">757</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 117}); event.stopPropagation();">
+Potato
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">758</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1024}); event.stopPropagation();">
+Asera
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">759</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1049}); event.stopPropagation();">
+Z3R0_D4Y
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">760</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 633}); event.stopPropagation();">
+ichbinzwoelf
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">761</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 186}); event.stopPropagation();">
+h4ci
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">762</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1056}); event.stopPropagation();">
+ucabrera
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">763</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 806}); event.stopPropagation();">
+RiST
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">764</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1069}); event.stopPropagation();">
+mamazi
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">765</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1070}); event.stopPropagation();">
+Jteam
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">766</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 759}); event.stopPropagation();">
+OutSiders
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">767</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 496}); event.stopPropagation();">
+Camille
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">768</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 816}); event.stopPropagation();">
+CyberSharks
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">769</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 324}); event.stopPropagation();">
+Kleo
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">770</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1085}); event.stopPropagation();">
+T4ng0_t34m
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">771</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1092}); event.stopPropagation();">
+TeamWind
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">772</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1094}); event.stopPropagation();">
+froglegs
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">773</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1095}); event.stopPropagation();">
+T4B
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">774</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 449}); event.stopPropagation();">
+Infinity Code
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">775</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 39}); event.stopPropagation();">
+Fri3ndZ1T
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">776</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1100}); event.stopPropagation();">
+Zombers
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">777</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1097}); event.stopPropagation();">
+Elaine_niu
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">778</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1119}); event.stopPropagation();">
+ctf_23
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">779</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1122}); event.stopPropagation();">
+4r4r4r491
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">780</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 359}); event.stopPropagation();">
+CrimsonRed
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">781</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 253}); event.stopPropagation();">
+WHRWLF
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">782</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 497}); event.stopPropagation();">
+HackNch!ll
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">783</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1137}); event.stopPropagation();">
+NTHacked
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">784</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1148}); event.stopPropagation();">
+hackuaz
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">785</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1088}); event.stopPropagation();">
+DCZia
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">786</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1157}); event.stopPropagation();">
+nCreeps
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">787</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1169}); event.stopPropagation();">
+w1ldm1nt
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">788</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1175}); event.stopPropagation();">
+Advanced CTF Threat
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">789</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1178}); event.stopPropagation();">
+team_martintimell
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">790</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1187}); event.stopPropagation();">
+no_ob
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">791</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1191}); event.stopPropagation();">
+toogi
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">792</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 42}); event.stopPropagation();">
+LOIC
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">793</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1201}); event.stopPropagation();">
+AmeenSec
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">794</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1202}); event.stopPropagation();">
+mendung.gg
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">795</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 334}); event.stopPropagation();">
+a
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">796</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 273}); event.stopPropagation();">
+0xHacked
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">797</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1218}); event.stopPropagation();">
+stardust
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">798</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1223}); event.stopPropagation();">
+Pouls Friends
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">799</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1232}); event.stopPropagation();">
+saveDrop
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">800</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1237}); event.stopPropagation();">
+Etacirus42
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">801</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 75}); event.stopPropagation();">
+noob
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">802</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 126}); event.stopPropagation();">
+KuK Hofhacker
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">803</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1256}); event.stopPropagation();">
+blast
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">804</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1217}); event.stopPropagation();">
+skybridge
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">805</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1273}); event.stopPropagation();">
+kgrzk3
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">806</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1275}); event.stopPropagation();">
+He1loW0rld
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">807</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1282}); event.stopPropagation();">
+xon1l
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">808</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1288}); event.stopPropagation();">
+CryptoCrackers
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">809</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1290}); event.stopPropagation();">
+aggr0cr4g
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">810</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1299}); event.stopPropagation();">
+Centaurs are Cute
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">811</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1301}); event.stopPropagation();">
+hexray
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">812</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1303}); event.stopPropagation();">
+ctfproblem
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">813</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1304}); event.stopPropagation();">
+azooz
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">814</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1306}); event.stopPropagation();">
+DOA BUNDA
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">815</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1319}); event.stopPropagation();">
+HackUTT
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">816</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 1320}); event.stopPropagation();">
+Bala Bros
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">817</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 833}); event.stopPropagation();">
+flakers
+</a>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<th scope="row" class="text-center">818</th>
+<td>
+<a href="#" @click="desktop.createPublicTeamPane({ PANE_TEAM_ID: 265}); event.stopPropagation();">
+Hash Cracking Slasher
+</a>
+</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="footer">
+<div class="container text-center">
+<a href="https://ctfd.io" class="text-secondary">
+<small class="text-muted">Powered by CTFd</small>
+</a>
+</div>
+</footer>
+<div x-data>
+<div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+<div x-ref="toast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+<div class="toast-header">
+<strong class="me-auto" x-text="$store.toast.title"></strong>
+<small>just now</small>
+<button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+</div>
+<div class="toast-body" x-html="$store.toast.html">
+</div>
+</div>
+</div>
+</div>
+<div x-data>
+<div class="modal" x-ref="modal" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title" x-text="$store.modal.title"></h5>
+<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<div class="modal-body">
+<p x-html="$store.modal.html"></p>
+</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-primary" data-bs-dismiss="modal">Got it!</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script defer type="module" src="/themes/uiuctf-2023-ctfd-theme/static/assets/index.5a84c1a7.js"></script><script defer type="module" src="/themes/uiuctf-2023-ctfd-theme/static/assets/index.4d677054.js"></script><script defer type="module" src="/themes/uiuctf-2023-ctfd-theme/static/assets/echarts.128204f2.js"></script><script defer type="module" src="/themes/uiuctf-2023-ctfd-theme/static/assets/scoreboard.814a3cd5.js"></script>
+</body>
+</html>

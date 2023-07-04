@@ -1,0 +1,1 @@
+{"success": true, "data": [{"team": {"id": 640, "name": "ret2rev"}, "id": 4769, "user": {"id": 1133, "name": "FlamePyromancer"}, "challenge_id": 7, "type": "correct", "date": "2023-07-01T02:50:24.667952+00:00", "challenge": {"id": 7, "category": "osint", "value": 50, "name": "Finding Artifacts 2"}}], "meta": {"count": 1}}

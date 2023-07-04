@@ -1,0 +1,1 @@
+{"success": true, "data": [{"type": "correct", "challenge_id": 7, "challenge": {"name": "Finding Artifacts 2", "id": 7, "value": 50, "category": "osint"}, "user": {"name": "physicube", "id": 899}, "date": "2023-07-01T03:24:24.984286+00:00", "id": 5564, "team": {"name": "cat :flag_kr:", "id": 352}}], "meta": {"count": 1}}

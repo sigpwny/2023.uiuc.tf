@@ -1,0 +1,1 @@
+{"success": true, "data": [{"team": {"id": 468, "name": "Starburst Kiwawa"}, "id": 20115, "user": {"id": 2146, "name": "Terry1234"}, "challenge_id": 31, "type": "correct", "date": "2023-07-01T18:15:38.002148+00:00", "challenge": {"id": 31, "category": "pwn", "value": 50, "name": "Chainmail"}}], "meta": {"count": 1}}

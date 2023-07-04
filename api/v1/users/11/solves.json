@@ -1,0 +1,1 @@
+{"success": true, "data": [{"type": "correct", "challenge_id": 11, "challenge": {"name": "Jonah's Journal", "id": 11, "value": 50, "category": "osint"}, "user": {"name": "n0313s", "id": 11}, "date": "2023-07-01T14:42:21.915433+00:00", "id": 16981, "team": {"name": "n0313s", "id": 7}}], "meta": {"count": 1}}

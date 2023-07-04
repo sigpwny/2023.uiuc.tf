@@ -1,0 +1,1 @@
+{"success": true, "data": [{"team": {"id": 373, "name": "FITSEC"}, "id": 21621, "user": {"id": 1104, "name": "condor0010"}, "challenge_id": 3, "type": "correct", "date": "2023-07-01T20:28:06.954431+00:00", "challenge": {"id": 3, "category": "rev", "value": 50, "name": "vmwhere1"}}], "meta": {"count": 1}}

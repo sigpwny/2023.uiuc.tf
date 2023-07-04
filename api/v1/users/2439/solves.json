@@ -1,0 +1,1 @@
+{"success": true, "data": [{"team": {"id": 1300, "name": "InfosecIITG"}, "id": 28743, "user": {"id": 2439, "name": "s4r7h4k"}, "challenge_id": 13, "type": "correct", "date": "2023-07-02T18:16:53.780769+00:00", "challenge": {"id": 13, "category": "crypto", "value": 50, "name": "Three-Time Pad"}}], "meta": {"count": 1}}

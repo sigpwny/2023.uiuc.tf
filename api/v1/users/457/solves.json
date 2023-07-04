@@ -1,0 +1,1 @@
+{"success": true, "data": [{"team": {"id": 89, "name": "PFS"}, "id": 24079, "user": {"id": 457, "name": "AngryPeanut"}, "challenge_id": 39, "type": "correct", "date": "2023-07-02T01:56:12.243626+00:00", "challenge": {"id": 39, "category": "misc", "value": 50, "name": "Feedback Survey"}}], "meta": {"count": 1}}
